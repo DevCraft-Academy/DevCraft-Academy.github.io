@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -17,6 +19,7 @@ gem 'minima', '~> 2.5'
 group :jekyll_plugins do
   gem 'jekyll-feed', '~> 0.12'
   gem 'github-pages', '~> 228' # Also installs correct version of jekyll
+  gem 'jekyll-inline-svg'
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem

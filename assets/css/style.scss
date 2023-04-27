@@ -1,0 +1,65 @@
+---
+---
+
+// Colors
+$primary: #006e89;
+$secondary: #ffd500;
+
+@import "bootstrap/scss/bootstrap.scss";
+
+header {
+  background: $primary;
+  color: white;
+  padding: $spacer;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+section {
+  padding: $spacer * 4 0;
+}
+
+.claim {
+  padding: $spacer * 8  $spacer * 2;
+  text-align: center;
+
+  h1, .h1 {
+    color: $primary;
+  }
+
+  em {
+    color: darken($secondary, 3%);
+    font-style: normal;
+  }
+}
+
+.metrics {
+  background: #EEE;
+
+  h2 {
+    color: $primary;
+  }
+}
+
+.video {
+  text-align: center;
+}
+
+.problems {
+  background: $primary;
+  color: white;
+
+  h2 {
+    margin-bottom: $spacer * 4;
+  }
+
+  svg {
+    width: auto;
+    height: $spacer * 2;
+    margin-bottom: $spacer;
+  }
+}
