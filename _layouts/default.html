@@ -1,21 +1,59 @@
 <!DOCTYPE html>
 <html lang="de">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{ page.title }}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body>
     <header>
       <div class="container">
-        <a href="/">{% svg /assets/images/logo.svg width=50 %}</a>
-        <h1>DevCraft Academy</h1>
+        <a href="/">
+          {% svg /assets/images/logo.svg width=50 %}
+          <h1>DevCraft Academy</h1>
+        </a>
         {% include cta_button.html text="Preis erhalten" %}
       </div>
     </header>
     {{ content }}
+    <footer>
+      <div class="container">
+        <h2>Mit Liebe in Wien gemacht von der</h2>
+        <p>
+          Helmcraft GmbH<br />
+          Hietzinger Hauptstraße 101/1<br />
+          1130 Wien<br>
+          Österreich
+        </p>
+        <p class="muted">
+          Dienstleistungen in der Datenverarbeitung und Informationstechnik,
+          insbesondere die Software-Entwicklung<br />
+          UID-Nr: ATU78631027<br />
+          Firmenbuchnummer 588989 k<br />
+          Handelsgericht Wien<br />
+        </p>
+        <p class="muted">
+          Mitglied der Wirtschaftskammer für Wien, Kammernummer 892504<br />
+          Fachgruppe: Unternehmensberatung, Buchhaltung und
+          Informationstechnologie<br />
+          (Gewerbe-)Behörde gem. ECG: Magistratisches Bezirksamt des XIII.
+          Bezirkes<br />
+        </p>
+        <p class="muted">
+          Beschwerden kannst du an die
+          <a href="http://ec.europa.eu/odr"
+            >Online-Streitbeilegungsplattform der EU richten</a
+          >. Oder du schreibst uns einfach eine Mail an mail@devcraft.academy.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

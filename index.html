@@ -4,70 +4,228 @@ title: DevCraft Academy
 ---
 
 <section class="claim container">
-  <p>Für Web- und App-Developer mit erster Berufserfahrung:</p>
-  <h1>
-    So wirst du in nur <em>6 Monaten</em> vom Junior
-    <em>zum Senior&nbsp;Developer</em> ohne jahrelanges Laufen im Hamsterrad!
+  <p class="lead">
+    Für Web- und App-Entwickler:innen mit erster Berufserfahrung:
+  </p>
+  <h1 class="mb-5">
+    So wirst du in nur <mark>6 Monaten</mark> vom Junior
+    <mark>zum Senior&nbsp;Developer</mark> ohne jahrelanges Laufen im
+    Hamsterrad!
   </h1>
+  {% comment %}
+  <p class="lead">Erfahre in dem Video, wie das geht:</p>
+  {% endcomment %} {% include cta_button.html text="Gratis Call buchen"
+  class="btn_lg" %}
 </section>
 <section class="metrics">
   <div class="container">
-    <div class="row gy-4">
+    <div class="row g-5">
       {% include metric.html metric="20+" text="Jahre internationale
       Development-Erfahrung" %} {% include metric.html metric="Unter Top 3%"
       text="der weltbesten Entwickler:innen – bewertet von Toptal" %} {% include
-      metric.html metric="2000+" text="Stunden Erfahrung im Mentoring für
+      metric.html metric="2000+" text="Stunden Erfahrung im Mentoring von
       Junior-Entwickler:innen" %}
     </div>
   </div>
 </section>
-<section class="video container">
-  <h2>Hierher kommt das Video</h2>
-  {% include cta_button.html text="Preis erhalten" %}
-</section>
-<section class="problems">
+<section class="problems arguments">
   <div class="container">
-    <h2 class="text-center">
-      Hast du das Gefühl, du entwickelst dich einfach nicht weiter?
-    </h2>
-    <div class="row row-cols-1 row-cols-md-3 gx-5 gy-5">
-      {% include problem.html icon="piggy-bank" headline="Schlechte Bezahlung"
+    <h2>Hast du das Gefühl, du entwickelst dich einfach nicht weiter?</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+      {% include argument.html icon="piggy-bank" headline="Schlechte Bezahlung"
       text="<strong>Dein Gehalt verbessert sich nicht</strong> so, wie du dir
-      das vorstellst?" %} {% include problem.html icon="arrow-down-right-circle"
-      headline="Keine Aufstiegschancen" text="Du gewinnst mehr und mehr
-      Erfahrung, aber wirst <strong>noch immer gleich behandelt?</strong>" %} {%
-      include problem.html icon="life-preserver" headline="Kein Support"
-      text="Du brauchst <strong>Unterstützung</strong>, bekommst
-      <strong>in deinem Job aber keine</strong>?" %} {% include problem.html
+      das vorstellst?" %} {% include argument.html
+      icon="arrow-down-right-circle" headline="Keine Aufstiegschancen" text="Du
+      gewinnst mehr und mehr Erfahrung, aber wirst
+      <strong>noch immer gleich behandelt?</strong>" %} {% include argument.html
+      icon="life-preserver" headline="Kein Support" text="Du brauchst
+      <strong>Unterstützung</strong>, bekommst
+      <strong>in deinem Job aber keine</strong>?" %} {% include argument.html
       icon="emoji-frown" headline="Unfairer Wettbewerb" text="Du musst mit
       <strong>günstigen Entwickler:innen</strong> aus dem Ausland
-      <strong>konkurrieren</strong>?" %} {% include problem.html icon="magnet"
+      <strong>konkurrieren</strong>?" %} {% include argument.html icon="magnet"
       headline="Ausbeutung" text="Du bekommst
       <strong>nicht mehr vom Kuchen</strong>, den dein Chef mit dir verdient?"
-      %} {% include problem.html icon="trophy" headline="Keine Koryphäe"
+      %} {% include argument.html icon="trophy" headline="Keine Koryphäe"
       text="Du weißt einfach nicht, wie du zu den
       <strong>besten Entwickler:innen der Welt</strong> zählen kannst?" %}
     </div>
   </div>
 </section>
 <section class="claim container h1">
-  <div class="h1">
-    Es ist absolut möglich, dass du als Junior in <em>6 Monaten</em> mit dem
-    geballten Wissen an zeitlosen Dev-Skills das
-    <em>Senior&#8209;Level</em> erreichst.
+  Es ist absolut möglich, dass du als Junior <mark>in 6 Monaten</mark> mit dem
+  geballten&nbsp;Wissen an zeitlosen Dev-Skills das
+  <mark>Senior&#8209;Level</mark> erreichst.
+</section>
+<section class="about-me container pt-0">
+  <h2 class="text-center mb-5">Wer bin ich, dass ich so etwas behaupte?</h2>
+  <div class="card overflow-hidden">
+    <div class="row g-0">
+      <div class="image col-md-6 d-flex flex-column justify-content-end">
+        {% picture about-me photo_agentconf_cropped.jpg --alt Clemens Helm %}
+      </div>
+      <div class="col-md-6">
+        <div class="card-body p-4 px-lg-5">
+          <p class="display-6">
+            Internationaler Software Entwickler seit über 20 Jahren
+          </p>
+          <h3 class="card-title h5 mb-1">
+            Clemens Helm
+            <small class="text-muted">Start-up Gründer und CEO</small>
+          </h3>
+        </div>
+        <ul class="list-group list-group-flush px-4 px-lg-5">
+          <li class="list-group-item px-0">
+            <strong>Top 3%</strong> der weltbesten Software-Entwickler,
+            Auszeichnung der internationalen Freelancer-Agentur Toptal
+          </li>
+          <li class="list-group-item px-0">
+            Software-Aufträge von erfolgreichen IT-Firmen im
+            <strong>Silicon Valley</strong> und auf der
+            <strong>ganzen Welt</strong>
+          </li>
+          <li class="list-group-item px-0">
+            <strong>Speaker</strong> auf Konferenzen und Meetups
+          </li>
+          <li class="list-group-item px-0">
+            <strong>CTO</strong> in einem medizinischen Unternehmen
+          </li>
+          <li class="list-group-item px-0">
+            <strong>über 100 Software-Projekte</strong> für Top-Startups wie
+            Bitmovin, PSPDFKit und Podigee umgesetzt
+          </li>
+          <li class="list-group-item px-0">
+            Zusammenarbeit mit mehr als
+            <strong> 300 internationalen Software-Entwickler:innen </strong>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
-<section class="aboutMe">
-  <p class="lead">Wer bin ich, dass ich so etwas zu behaupte?</p>
-  <h2>Internationaler Software Entwickler seit über 20 Jahren</h2>
-  <img src="assets/images/photo_agentconf.jpg" alt="AgentConf 2019" class="img-fluid">
-  <ul>
-    <li>Start-up Gründer und CEO</li>
-    <li>Top 3% der weltbesten Software-Entwickler, Auszeichnung der internationalen Freelancer-Agentur Toptal</li>
-    <li>Software-Aufträge von erfolgreichen IT-Firmen im Silicon Valley und auf der ganzen Welt</li>
-    <li>Speaker auf Konferenzen und Meetups</li>
-    <li>CTO in einem medizinischen Unternehmen</li>
-    <li>über 100 Software-Projekte für Top-Startups wie Bitmovin, PSPDFKit und Podigee umgesetzt</li>
-    <li>Zusammenarbeit mit mehr als 300 internationalen Software-Entwickler:innen</li>
-  </ul>
+<section class="benefits arguments">
+  <div class="container">
+    <h2>
+      Wie sieht deine Karriere aus, nachdem du mit uns zusammengearbeitet hast?
+    </h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-5">
+      {% include argument.html icon="sunglasses" headline="Souverän als Senior"
+      text="Du wendest
+      <strong
+        >mühelos alle Fertigkeiten eines erfahrenen Senior-Developers</strong
+      >
+      an, weil sie dir in Fleisch und Blut übergegangen sind." %} {% include
+      argument.html icon="cash-stack" headline="Schneller zu mehr Gehalt"
+      text="Du bewältigst komplexere Herausforderungen und
+      <strong>verdienst dadurch bedeutend mehr</strong>. Und das nach nur
+      wenigen Monaten." %} {% include argument.html icon="shield-check"
+      headline="Ein sicheres Gefühl" text="Du fühlst dich
+      <strong>sicher bei allen Herausforderungen</strong>, weil du das Rüstzeug
+      hast, sie zu bewältigen." %} {% include argument.html icon="hammer"
+      headline="Vielfältige Jobangebote" text="Dank deiner gefragten Fähigkeiten
+      kannst du aus einer <strong>Unmenge attraktiver Jobs auswählen</strong>."
+      %} {% include argument.html icon="heart" headline="Erfülltes Berufsleben"
+      text="Du wirst mit
+      <strong>interessanten und höherwertigen Aufgaben</strong> betraut und
+      gewinnst immer mehr Vertrauen." %} {% include argument.html icon="gem"
+      headline="Anerkennung als Top-Developer" text="In deiner Arbeit und in
+      deinem Umfeld wirst du für deine
+      <strong>Expertise respektiert und um professionellen Rat gefragt</strong
+      >." %} {% include argument.html icon="cash-stack" headline="Ein starkes
+      Netzwerk" class="offset-md-3 offset-lg-4" text="Du teilst dein Ziel mit
+      talentierten Entwickler:innen, die dich auf deinem Weg begleiten.
+      <strong>Es entstehen Projekte, Jobangebote und Freundschaften.</strong>"
+      %}
+    </div>
+  </div>
+</section>
+{% include methods.html %}
+<section class="pain">
+  <div class="container">
+    <h2 class="mb-5 text-center">Wenn du keine Lust mehr hast, …</h2>
+    <div class="row row-cols-1 row-cols-lg-2 g-5">
+      <div class="col display-6">
+        … dass dir andere Entwicker:innen deinen
+        <mark>Traumjob wegschnappen</mark>.
+      </div>
+      <div class="col display-6">
+        … dass jede <mark>künstliche Intelligenz</mark> besseren Code schreibt
+        als du.
+      </div>
+      <div class="col col-md-6 offset-lg-3 display-6">
+        … in diverse Online-Kurse zu investieren, die dir
+        <mark>in der Praxis nichts gebracht</mark> haben.
+      </div>
+    </div>
+  </div>
+</section>
+<section class="claim container h1">
+  Wenn du möchtest, dass deine Handlungen endlich
+  <mark>Früchte tragen 🍒</mark>, dann
+  <mark>unterstützen wir dich gerne 💪🏼</mark>!
+</section>
+<section class="testimonials container pt-0">
+  <h2 class="text-center mb-5">Juniors, die wir bereits unterstützt haben:</h2>
+  {% for testimonial in site.data.testimonials %} {% include testimonial.html
+  testimonial=testimonial %} {% endfor %}
+</section>
+<section class="reasons">
+  <div class="container">
+    <h2 class="text-center">
+      3 Gründe warum du einen Termin mit uns vereinbaren solltest
+    </h2>
+    <ol class="lead">
+      <li>
+        Wir durchleuchten deine Entwicklungsfähigkeiten und erstellen eine
+        <mark>maßgeschneiderte zentimetergenaue Wegbeschreibung</mark>, wie du
+        es zum Senior schaffen wirst. Du wirst erstaunt sein, wie gut du dich
+        selbst dabei kennenlernst!
+      </li>
+      <li>
+        Mit der Erfahrung von dutzenden Spitzen-Developers und Tech-Leaders, die
+        dir auch als Mentoren zur Seite stehen, erwirbst du neue,
+        <mark>speziell für dich ausgewählte Kenntnisse und Fähigkeiten</mark>,
+        die die allermeisten Developer in den Schatten stellen werden.
+      </li>
+      <li>
+        Was du bei uns lernst, wirst du <mark>nie wieder vergessen!</mark> Unser
+        Programm ist so aufgebaut, dass du alles Erlernte auf spielerische Weise
+        tief in deinem Hirn eingravierst.
+      </li>
+    </ol>
+  </div>
+</section>
+<section class="cta-steps container text-center">
+  <h2>Wenn das gut klingt, sichere dir jetzt einen Call</h2>
+  <p class="mb-5">
+    Teilnehmerzahl des nächsten „Junior to Senior”-Programms auf maximal 20
+    Leute limitiert.
+  </p>
+  <div class="row mb-5 g-5 row-cols-1 row-cols-md-3">
+    <div class="col">
+      <h3>Schritt 1</h3>
+      <p>
+        <mark>Klicke auf den Button</mark> und sichere dir einen der freien
+        30-Minuten-Termine in den kommenden 5 Tagen.
+      </p>
+    </div>
+    <div class="col">
+      <h3>Schritt 2</h3>
+      <p>
+        In diesem Gespräch nehmen wir deine bisherige Developer-Karriere unter
+        die Lupe und erarbeiten, wie dein
+        <mark>kürzester Weg zum Senior</mark> aussieht.
+      </p>
+    </div>
+    <div class="col">
+      <h3>Schritt 3</h3>
+      <p>
+        Wir geben dir <mark>Quick-Tipps</mark>, die du gleich umsetzen kannst.
+        Egal, ob du mit uns zusammenarbeiten möchtest oder nicht. Abschließend
+        beurteilen wir, ob du für unser Programm geeignet bist.
+      </p>
+    </div>
+  </div>
+  {% include cta_button.html text="Gratis Call sichern" class="btn_lg" %}
+  <p>Werde einer der besten Senior Developers weltweit!</p>
 </section>

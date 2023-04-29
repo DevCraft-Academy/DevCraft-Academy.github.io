@@ -1,0 +1,56 @@
+media_queries:
+  xs: 'max-width: 575px'
+  sm: 'max-width: 767px'
+  md: 'max-width: 991px'
+  lg: 'max-width: 1199px'
+  xl: 'max-width: 1399px'
+  xxl: 'min-width: 1400px'
+
+presets:
+  about-me:
+    formats: [avif, original]
+    format_quality:
+      avif: 50
+      original: 80
+    widths: [800, 1200, 1600, 3200]
+    sizes:
+      xs: 100vw
+      sm: 100vw
+      md: 100vw
+      lg: 70vw
+      xl: 60rem
+      xxl: 60rem
+    attributes:
+      img: 'loading="lazy" decoding="async"'
+
+  testimonial:
+    formats: [avif, original]
+    format_quality:
+      avif: 80
+      original: 80
+    widths: [400, 800, 1200, 1600]
+    sizes:
+      xs: 100vw
+      sm: 80vw
+      md: 20vw
+      lg: 20vw
+      xl: 20vw
+      xxl: 15vw
+    attributes:
+      img: 'loading="lazy" decoding="async" class="img-fluid rounded-start profile-picture"'
+
+  testimonial-screenshot:
+    formats: [avif, original]
+    format_quality:
+      avif: 40
+      original: 80
+    widths: [400, 800, 1200, 1600]
+    sizes:
+      xs: 100vw
+      sm: 80vw
+      md: 20vw
+      lg: 20vw
+      xl: 20vw
+      xxl: 15vw
+    attributes:
+      img: 'loading="lazy" decoding="async" class="rounded screenshot img-fluid"'

@@ -1,0 +1,17 @@
+<div class="col">
+  <div class="card">
+    <div class="card-img-top">
+      {% include bootstrap_icon.svg icon=include.method.icon %}
+    </div>
+    <div class="card-body">
+      <h3 class="card-title h4">
+        <span class="number">{{ include.index }}.</span> {{ include.method.title }}
+      </h3>
+      <ul>
+        {% for step in include.method.steps %}
+          <li>{{ step }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

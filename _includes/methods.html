@@ -1,0 +1,18 @@
+<section class="method container">
+  <h2 class="text-center mb-5">
+    Unser Rezept für Ergebnisse, die dich verblüffen werden:
+  </h2>
+  <div
+    class="row row-cols-1 row-cols-md-3 row-cols-lg-4 gx-2 gx-lg-0 gy-4 justify-content-between"
+  >
+    {% for method in site.data.methods %}
+      {% include method.html method=method index=forloop.index %}
+      {{ site.data.methods.length }}
+      {% unless forloop.last %}
+        <div class="col-lg-1 arrow d-none d-lg-flex">
+          {% include bootstrap_icon.svg icon="caret-right-fill" %}
+        </div>
+      {% endunless %}
+    {% endfor %}
+  </div>
+</section>

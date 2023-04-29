@@ -31,7 +31,8 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-theme: minima
+picture:
+  source: /assets/images
 plugins:
   - jekyll-feed
   - jekyll-inline-svg
