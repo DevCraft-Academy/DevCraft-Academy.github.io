@@ -339,8 +339,17 @@ mark {
   }
 }
 
-.cta-steps strong {
-  font-weight: 600;
+.cta-steps {
+  h3 {
+    background: $teal-500;
+    color: white;
+    border-radius: 0.25em;
+    padding: $spacer * 0.2;
+  }
+
+  strong {
+    font-weight: 600;
+  }
 }
 
 footer {
