@@ -181,21 +181,27 @@ mark {
     }
   }
 
-  $number-leading: 1rem;
-  $headline-indent: $spacer * 4;
+  .card-title {
+    display: flex;
+    align-items: baseline;
+    gap: $spacer;
+  }
 
   h3 {
-    margin: $number-leading 0 $spacer * 2 $headline-indent;
+    margin: 0 0 $spacer * 2 0;
     position: relative;
+    font-weight: 400;
   }
 
   .number {
-    position: absolute;
-    top: -$number-leading;
-    left: -$headline-indent;
-    color: $teal-300;
-    padding-right: $spacer * 0.5;
+    color: $teal;
+    font-weight: 200;
     font-size: 3rem;
+    width: 0.8em;
+  }
+
+  ul {
+    padding-left: 3.3rem;
   }
 }
 
@@ -334,12 +340,14 @@ mark {
 
   mark {
     background: $teal;
-    color: $yellow;
+    color: $yellow-300;
     font-weight: 500;
   }
 }
 
 .cta-steps {
+  padding-top: 0;
+
   h3 {
     background: $teal-500;
     color: white;
@@ -355,6 +363,7 @@ mark {
 footer {
   background: $teal;
   color: white;
+  text-align: center;
 
   h2 {
     font-size: inherit;
