@@ -38,6 +38,18 @@ header {
   }
 }
 
+.vidalytics {
+  margin: 0 auto;
+  padding-left: $spacer;
+  padding-right: $spacer;
+  padding-top: 0;
+  text-align: center;
+
+  > div {
+    border: 1px solid $teal-300;
+  }
+}
+
 section, footer {
   padding: $spacer * 4 0;
 
@@ -67,6 +79,10 @@ mark {
 }
 
 .claim {
+  &.primary {
+    padding-bottom: $spacer * 4;
+  }
+
   padding: $spacer * 5 $spacer * 2;
   text-align: center;
 
