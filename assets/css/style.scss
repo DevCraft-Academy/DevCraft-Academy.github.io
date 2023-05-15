@@ -397,3 +397,13 @@ footer {
     margin-bottom: 0;
   }
 }
+
+.thank-you {
+  padding-left: $spacer;
+  padding-right: $spacer;
+  text-align: left;
+
+  img {
+    width: 100%;
+  }
+}

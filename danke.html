@@ -1,0 +1,29 @@
+---
+layout: default
+title: Danke für deine Anmeldung!
+---
+
+{% include vidalytics_conversion_tracking.html %}
+<section class="primary thank-you claim container">
+  <div class="row g-lg-5">
+    <div class="col-5 col-lg-3 col-xxl-2">
+      {% picture thank-you-portrait portrait.jpg --alt Clemens Helm %}
+    </div>
+    <div class="col-7 col-lg-9 col-xxl-10">
+      <h1 class="display-6 mb-5">
+        Herzlichen Glückwunsch zur erfolgreichen Buchung deines Termins!
+      </h1>
+      <p class="lead">
+        Check deine E-Mails, wir haben dir soeben eine Nachricht zukommen
+        lassen.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="vidalytics container">
+  <p class="h4 text-center mt-5 mb-5">
+    Schau dir bitte dieses Video vor unserem Call an, wenn du es noch nicht
+    gemacht hast. So können wir direkt tiefer auf deinen Case eingehen:
+  </p>
+  {% include vidalytics.html %}
+</section>

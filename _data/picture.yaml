@@ -23,6 +23,20 @@ presets:
     attributes:
       img: 'loading="lazy" decoding="async"'
 
+  thank-you-portrait:
+    formats: [avif, original]
+    format_quality:
+      avif: 40
+      original: 80
+    widths: [800, 1200, 1600, 3200]
+    sizes:
+      xs: 100vw
+      sm: 100vw
+      md: 100vw
+      lg: 70vw
+      xl: 60rem
+      xxl: 60rem
+
   testimonial:
     formats: [avif, original]
     format_quality:
