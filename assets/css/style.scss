@@ -11,6 +11,14 @@ $secondary: $yellow;
 
 @import "bootstrap/scss/bootstrap.scss";
 
+html {
+  background: $teal;
+}
+
+body {
+  background: white;
+}
+
 header {
   background: $primary;
   color: white;
@@ -68,12 +76,13 @@ mark {
 }
 
 .btn_lg {
-  transform: scale(1.4);
+  padding: 0.3em 1em;
+  font-size: x-large;
   transition: all 0.2s ease-in-out;
   box-shadow: 0.2rem 0.2rem 2rem rgba(0, 0, 0, 0);
 
   &:hover {
-    transform: scale(1.5) rotate(-5deg);
+    transform: scale(1.1) rotate(-5deg);
     box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.1);
   }
 }
@@ -115,6 +124,10 @@ mark {
   p {
     margin-bottom: 0;
   }
+}
+
+.problems {
+  padding-top: 5rem;
 }
 
 .problems,
