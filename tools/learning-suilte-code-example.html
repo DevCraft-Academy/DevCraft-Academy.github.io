@@ -1,0 +1,59 @@
+<script src="/assets/scripts/he.js"></script>
+<style>
+  #textareas {
+    display: flex;
+    gap: 10px;
+  }
+  #textareas section {
+    height: 500px;
+    flex-grow: 1;
+  }
+
+  #textareas textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+  }
+</style>
+<h1>Code-Bespiel-Konverter</h1>
+<p>
+  Konvertiert Code-Beispiele in HTML-Code, der in Learning-Suite eingefügt
+  werden kann.
+</p>
+<div id="textareas">
+  <section>
+    <h2>Input</h2>
+    <p>Füge hier den Code ein, der konvertiert werden soll.</p>
+    <textarea id="input"> </textarea>
+  </section>
+  <section>
+    <h2>Output</h2>
+    <p>Hier erscheint der konvertierte Code.</p>
+    <pre><code id="output"></code></pre>
+  </section>
+</div>
+<script type="template">
+
+</script>
+<script>
+  const input = document.getElementById("input");
+  const output = document.getElementById("output");
+  const format = (code) =>
+      `&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" /&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;hljs.highlightAll();&lt;/script&gt;
+&lt;style&gt;
+.MuiBox-root div {
+white-space: normal !important;
+}
+
+.MuiBox-root pre code.hljs {
+  padding: 0;
+}
+&lt;/style&gt;
+&lt;pre&gt;&lt;code&gt;${he.encode(he.encode(code))}&lt;/code&gt;&lt;/pre&gt;`
+  input.addEventListener("input", () => {
+    console.log(format(input.value))
+    output.innerHTML = format(input.value);
+  });
+</script>
