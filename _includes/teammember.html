@@ -1,0 +1,38 @@
+<!-- Modal für jedes Teammitglied -->
+{% for member in site.data.teammembers %}
+<div
+  class="modal fade"
+  id="memberModal{{ forloop.index }}"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ member.name }}</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Schließen"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <img
+              src="{{ member.image }}"
+              alt="{{ member.name }}"
+              class="img-fluid"
+            />
+          </div>
+          <div class="col-md-6">
+            <p>{{ member.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}

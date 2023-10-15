@@ -5,8 +5,107 @@ title: Ueber uns
 
 {% include vidalytics_conversion_tracking.html %}
 <section class="primary claim container">
-  <p class="lead">Willkommen bei DevCraft Academy</p>
+  <p class="lead">DevCraft Academy</p>
   <h1 class="display-6 mb-5">
-    <strong> Ihre Quelle für maßgeschneiderte Entwickler-Kompetenz.</strong>
+    <strong> Wir bringen Nachwuchstalente zur Spitzenleistung</strong>
   </h1>
+</section>
+<section class="story container ">
+  <h2 >Unsere Geschichte</h2>
+  <p>
+Die DevCraft Academy entstand aus der Idee, Menschen, die das Programmieren
+    lieben, und Unternehmen, die nach talentierten Junior-Programmierern suchen,
+    zu verbinden. 
+  </p>
+</section>
+<section class="mission container">
+  <h2>Mission Statement</h2>
+  <p>
+    Wir wollen Menschen, die bereits auf Junior-Niveau programmieren können, auf
+    das nächste Level bringen. Unser Fokus liegt darauf, Menschen zu befähigen,
+    ihre Träume und beruflichen Ziele im Bereich der Programmierung zu
+    erreichen.
+  </p>
+</section>
+<section class="values container">
+  <h2>Unsere Werte</h2>
+  <ol>
+    <li>
+      <strong>Kompetenz:</strong> Wir streben nach höchster Qualität und
+      Leistung in allem, was wir tun.
+    </li>
+    <li>
+      <strong>Agilität:</strong> Wir passen uns den individuellen Bedürfnissen
+      unserer Teilnehmer und Kunden an.
+    </li>
+    <li>
+      <strong>Innovation:</strong> Wir bleiben stets auf dem neuesten Stand der
+      Technologie und entwickeln kreative Schulungslösungen.
+    </li>
+    <li>
+      <strong>Teamarbeit:</strong> Wir fördern die Fähigkeit, effektiv in
+      multidisziplinären Teams zu arbeiten, um gemeinsame Ziele zu erreichen.
+    </li>
+    <li>
+      <strong>Nachhaltigkeit:</strong> Wir setzen uns für langfristige Erfolge
+      ein.
+    </li>
+  </ol>
+</section>
+<section class="team container">
+  <h2>Unser Team</h2>
+  <p>
+    Unser Team besteht aus hochqualifizierten Experten, mit umfassender Berufserfahrung 
+    und einer guten Lehrkompetenz.
+  </p>
+  <div class="card overflow-hidden">
+    <div class="row g-0">
+      <div class="image col-md-6 d-flex flex-column justify-content-end">
+        {% picture about-me carola_clemes.jpg --alt Clemens und Carola Helm %}
+      </div>
+      <div class="col-md-6">
+        <div class="card-body p-4 px-lg-5">
+          <p class="display-6">
+            Das Gründerpaar
+          </p>
+          <h3 class="card-title h5 mb-1">
+            Clemens Helm
+            <small class="text-muted">Master Mind der DevCraft Academy und operativer CEO</small>
+          </h3>
+          <h3 class="card-title h5 mb-1">
+            Carola Helm
+            <small class="text-muted">Marketingchefin und strategischer CEO</small>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    {% for member in site.data.teammembers %}
+      <div class="col-md-4">
+        <div class="card">
+          <img src="{{ member.image }}" alt="{{ member.name }}" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">{{ member.name }}</h5>
+            <p class="card-text">{{ member.position }}</p>
+            <a href="#" data-toggle="modal" data-target="#memberModal{{ forloop.index }}">Mehr Info</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+<section class="vision container">
+  <h2>Unsere Vision</h2>
+  <p>
+    Wir wollen, dass Leute und Unternehmen ihr volles Potenzial erreichen. Wir glauben an 
+    lebenslanges Lernen, und sind davon überzeugt, dass alle davon profitieren werden. Unser 
+    Fokus liegt darauf, Menschen zu befähigen, ihre Träume und beruflichen Ziele im Bereich 
+    der Programmierung zu erreichen.
+  </p>
+  </br>
+  <p>Bei DevCraft Academy sind wir davon überzeugt, dass das Programmieren nicht nur eine 
+    Fähigkeit ist, sondern ein Schlüssel zur Verwirklichung von Träumen und zur Steigerung 
+    der Produktivität.</p>
 </section>

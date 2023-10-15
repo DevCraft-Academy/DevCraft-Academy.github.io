@@ -1,0 +1,14 @@
+- name: Clemens Helm
+  image: /assets/images/portrait.jpg
+  position: Gründer und CEO, Softwareentwickler
+  description: Clemens ist...
+
+- name: Carola Helm
+  image: /assets/images/carola_portait.png
+  position: Marketingchefin und CEO
+  description: Carola ist...
+
+- name: Edda Bültemeyer
+  image: /assets/images/edda_portrait.jpg
+  position: Sofwareentwicklerin und Marketingmitarbeiterin
+  description: Edda ist...
