@@ -22,7 +22,7 @@ body {
 header {
   background: $primary;
   color: white;
-  padding-top: $spacer;
+  padding: $spacer 0;
 
   a {
     display: flex;
@@ -45,17 +45,9 @@ header {
     align-items: center;
   }
 
-  .navigation {
-    display: flex;
-    background-color: $yellow;
-    margin-top: $spacer * 2;
-    padding: $spacer;
-    justify-content: space-around;
-    align-items: center;
-  }
 
   .menulink {
-    color: black;
+    color: white;
   }
 }
 
