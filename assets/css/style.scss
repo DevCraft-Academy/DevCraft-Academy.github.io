@@ -45,9 +45,16 @@ header {
     align-items: center;
   }
 
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
 
   .menulink {
     color: white;
+    margin: 0 $spacer*3;
   }
 }
 
@@ -426,12 +433,13 @@ footer {
   }
 }
 
-.story, .mission, .values, .vision  {
-  width: 50%;
+.team, .story, .mission, .values, .vision, .teamgallery{
+  max-width: 65rem;
 }
 
-.team {
-  max-width: 65rem;
+.mission-section {
+  background: $primary;
+}
 
   picture {
     height: 100%;
@@ -454,4 +462,15 @@ footer {
       border-top: none;
     }
   }
+
+
+.teamgallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;padding-top: $spacer * 4;
+}
+
+.employee {
+  margin: $spacer
 }
