@@ -5,25 +5,24 @@ title: Ueber uns
 
 {% include vidalytics_conversion_tracking.html %}
 <section class="primary claim container">
-  <p class="lead">DevCraft Academy</p>
-  <h1 class="display-6 mb-5">
+  <h1 class="display-6">
     <strong>Wir bringen Nachwuchstalente zur Spitzenleistung!</strong>
     <br />
     Wir sind davon überzeugt, dass Programmieren nicht nur eine Fähigkeit,
     sondern ein
-    <strong>Schlüssel zur Verwirklichung von Träumen</strong>ist.
+    <strong>Schlüssel zur Verwirklichung von Träumen</strong> ist.
   </h1>
 </section>
-<section class="story container">
+<div class="story container">
   <div class="card overflow-hidden">
     <div class="row g-0">
       <div class="image col-md-6 d-flex flex-column justify-content-end">
         {% picture about-me history.png --alt unsere Geschichte %}
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 story-position">
         <div class="card-body p-4 px-lg-5">
           <h2>Unsere Geschichte</h2>
-          <p>
+          <p class="message">
             Die DevCraft Academy entstand aus der Idee, Menschen, die das
             Programmieren lieben, und Unternehmen, die nach talentierten
             Junior-Programmierern suchen, zu verbinden.
@@ -32,25 +31,23 @@ title: Ueber uns
       </div>
     </div>
   </div>
-</section>
+</div>
 <section class="mission-section">
   <div class="mission container">
-    <div class="card overflow-hidden">
-      <div class="row g-0">
-        <div class="col-md-6">
-          <div class="card-body p-4 px-lg-5">
-            <h2>Mission Statement</h2>
-            <p>
-              Wir wollen Menschen, die bereits auf Junior-Niveau programmieren
-              können, auf das nächste Level bringen. Unser Fokus liegt darauf,
-              Menschen zu befähigen, ihre Träume und beruflichen Ziele im
-              Bereich der Programmierung zu erreichen.
-            </p>
-          </div>
+    <div class="row g-0">
+      <div class="col-md-6">
+        <div class="card-body p-4 px-lg-5">
+          <h2>Mission Statement</h2>
+          <p class="message">
+            Wir wollen Leute, die bereits auf Junior-Niveau programmieren
+            können, auf das nächste Level bringen. Unser Fokus liegt darauf,
+            Menschen zu befähigen, ihre Träume und beruflichen Ziele im Bereich
+            der Programmierung zu erreichen.
+          </p>
         </div>
-        <div class="image col-md-6 d-flex flex-column justify-content-end">
-          {% picture about-me mission.png --alt Mission %}
-        </div>
+      </div>
+      <div class="image col-md-6 d-flex flex-column justify-content-end">
+        {% picture about-me mission.png --alt Mission %}
       </div>
     </div>
   </div>
@@ -93,46 +90,46 @@ title: Ueber uns
   </div>
 </section>
 <section class="benefits arguments">
+  <div class="teamtext container">
+    <h2>Unser Team</h2>
+  </div>
   <div class="team container">
     <div class="card overflow-hidden">
       <div class="row g-0">
         <div class="col-md-6">
           <div class="card-body p-4 px-lg-5">
-            <h2>Unser Team</h2>
-            <p>
-              Unser Team besteht aus hochqualifizierten Experten, mit
-              umfassender Berufserfahrung und einer guten Lehrkompetenz.
-            </p>
+            <p class="founders-heading">Das Gründerpaar</p>
+            <h3 class="card-title h5 mb-1">
+              Clemens Helm
+              <small class="text-muted"
+                >Ideengeber und Master Mind der DevCraft Academy. Operativer CEO
+                und CTO. Über 20 Jahre Erfahrung als internationaler Software
+                Entwickler.</small
+              >
+            </h3>
+            <h3 class="card-title h5 mb-1 mt-4">
+              Carola Helm
+              <small class="text-muted"
+                >Marketingchefin und strategischer CEO von der ersten Stunde.
+                Koordination der Softskill Trainings.</small
+              >
+            </h3>
           </div>
         </div>
-        <div class="image col-md-6 d-flex flex-column justify-content-end">
-          {% picture about-me team.png --alt Mission %}
+        <div
+          class="image col-md-6 d-flex flex-column justify-content-end founders"
+        >
+          {% picture about-me carola_clemes.jpg --alt Clemens und Carola Helm %}
         </div>
       </div>
     </div>
   </div>
 
-  <!-- <div class="card overflow-hidden">
-    <div class="row g-0">
-      <div class="image col-md-6 d-flex flex-column justify-content-end">
-        {% picture about-me carola_clemes.jpg --alt Clemens und Carola Helm %}
-      </div>
-      <div class="col-md-6">
-        <div class="card-body p-4 px-lg-5">
-          <p class="display-6">
-            Das Gründerpaar
-          </p>
-          <h3 class="card-title h5 mb-1">
-            Clemens Helm
-            <small class="text-muted">Master Mind der DevCraft Academy und operativer CEO</small>
-          </h3>
-          <h3 class="card-title h5 mb-1">
-            Carola Helm
-            <small class="text-muted">Marketingchefin und strategischer CEO</small>
-          </h3>
-        </div>
-      </div>
-    </div>
+  <!-- <div class="teamtext container text-box">
+    <p class="message-2">
+      Unser Team besteht aus hochqualifizierten Experten, mit umfassender
+      Berufserfahrung und einer guten Lehrkompetenz.
+    </p>
   </div> -->
 
   <div class="teamgallery container">
@@ -166,11 +163,11 @@ title: Ueber uns
       <div class="col-md-6">
         <div class="card-body p-4 px-lg-5">
           <h2>Unsere Vision</h2>
-          <p>
-            Wir wollen, dass Leute und Unternehmen ihr volles Potenzial
-            erreichen. Wir glauben an lebenslanges Lernen, und sind davon
+          <p class="message">
+            Wir wollen, dass du und dein Unternehmen euer volles Potenzial
+            erreicht. Wir glauben an lebenslanges Lernen, und sind davon
             überzeugt, dass alle davon profitieren werden. Unser Fokus liegt
-            darauf, Menschen zu befähigen, ihre Träume und beruflichen Ziele im
+            darauf, Personen zu befähigen, ihre Träume und beruflichen Ziele im
             Bereich der Programmierung zu erreichen.
           </p>
         </div>
@@ -178,3 +175,7 @@ title: Ueber uns
     </div>
   </div>
 </section>
+<div class="cta-box">
+  {% include cta_button.html text="Erstgespräch vereinbaren" class="btn_lg mt-4"
+  %}
+</div>
