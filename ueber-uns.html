@@ -128,11 +128,7 @@ title: Ueber uns
   <div class="teamgallery container">
     {% for member in site.data.teammembers %}
     <div class="employee col-md-4">
-      <div
-        class="card"
-        data-bs-toggle="modal"
-        data-bs-target="#memberModal{{ forloop.index }}"
-      >
+      <div class="card">
         <img
           src="{{ member.image }}"
           alt="{{ member.name }}"
