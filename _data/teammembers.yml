@@ -1,15 +1,13 @@
+---
 - name: Clemens Helm
-  image: /assets/images/portrait_clemens.png
+  image: "/assets/images/portrait_clemens.png"
   position: Gründer und CEO
-
 - name: Carola Helm
-  image: /assets/images/carola_portait.png
+  image: "/assets/images/carola_portait.png"
   position: Marketingchefin und CEO
-
 - name: Edda Bültemeyer
-  image: /assets/images/portrait_edda.png
+  image: "/assets/images/portrait_edda.png"
   position: Sofwareentwicklerin
-
 - name: Ramón Huidobro
-  image: /assets/images/portrait_ramon.png
+  image: "/assets/images/portrait_ramon.png"
   position: Copywriter
