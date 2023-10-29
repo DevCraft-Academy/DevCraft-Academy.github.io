@@ -1,7 +1,4 @@
----
----
-
-@use "sass:map";
+--- --- @use "sass:map";
 
 // Colors
 $yellow: #ffd500;
@@ -29,12 +26,14 @@ header {
     align-items: center;
     gap: $spacer;
 
-    &, &:hover, &:active {
+    &,
+    &:hover,
+    &:active {
       color: inherit;
       text-decoration: none;
     }
 
-    > .h2 {
+    >.h2 {
       margin-bottom: 0;
     }
   }
@@ -65,12 +64,13 @@ header {
   padding-top: 0;
   text-align: center;
 
-  > div {
+  >div {
     border: 1px solid $teal-300;
   }
 }
 
-section, footer {
+section,
+footer {
   padding: $spacer * 4 0;
 
   @include media-breakpoint-up("lg") {
@@ -119,7 +119,8 @@ mark {
     font-weight: 400
   }
 
-  &.display-6, .display-6 {
+  &.display-6,
+  .display-6 {
     color: $primary;
   }
 }
@@ -442,7 +443,12 @@ footer {
   padding-bottom: $spacer * 10;
 }
 
-.team, .story, .mission, .values, .vision, .teamgallery{
+.team,
+.story,
+.mission,
+.values,
+.vision,
+.teamgallery {
   max-width: 65rem;
   justify-content: center;
 }
@@ -453,27 +459,27 @@ footer {
   text-align: right;
 }
 
-  picture {
-    height: 100%;
-    display: flex;
-  }
+picture {
+  height: 100%;
+  display: flex;
+}
 
-  img {
-    width: 100%;
-    object-fit: cover;
-  }
+img {
+  width: 100%;
+  object-fit: cover;
+}
 
-  .display-6 {
-    margin-bottom: $spacer * 3;
-  }
+.display-6 {
+  margin-bottom: $spacer * 3;
+}
 
-  ul {
-    margin-bottom: $spacer * 2;
+ul {
+  margin-bottom: $spacer * 2;
 
-    li:first-child {
-      border-top: none;
-    }
+  li:first-child {
+    border-top: none;
   }
+}
 
 .teamtext {
   margin-bottom: $spacer*4;
