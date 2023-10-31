@@ -16,7 +16,7 @@ title: Ueber uns
   <div class="card overflow-hidden">
     <div class="row g-0">
       <div class="image col-md-6 d-flex flex-column justify-content-end">
-        {% picture about-me history.png --alt unsere Geschichte %}
+        {% picture history.png --alt unsere Geschichte %}
       </div>
       <div class="col-md-6 story-position">
         <div class="card-body p-4 px-lg-5">
@@ -46,7 +46,7 @@ title: Ueber uns
         </div>
       </div>
       <div class="image col-md-6 d-flex flex-column justify-content-end">
-        {% picture about-me mission.png --alt Mission %}
+        {% picture mission.png --alt Mission %}
       </div>
     </div>
   </div>
@@ -55,7 +55,7 @@ title: Ueber uns
   <div class="card overflow-hidden">
     <div class="row g-0">
       <div class="image col-md-6 d-flex flex-column justify-content-end">
-        {% picture about-me values.png --alt unsere Werte %}
+        {% picture values.png --alt unsere Werte %}
       </div>
       <div class="col-md-6">
         <div class="card-body p-4 px-lg-5">
@@ -122,7 +122,7 @@ title: Ueber uns
     {% for member in site.data.teammembers %}
     <div class="employee col-md-4">
       <div class="card">
-        <img src="{{ member.image }}" alt="{{ member.name }}" class="card-img-top" />
+        <img src="/assets/images/{{ member.image }}" alt="{{ member.name }}" class="card-img-top" />
         <div class="card-body">
           <h5 class="card-title">{{ member.name }}</h5>
           <p class="card-text">{{ member.position }}</p>
@@ -136,7 +136,7 @@ title: Ueber uns
   <div class="card overflow-hidden">
     <div class="row g-0">
       <div class="image col-md-6 d-flex flex-column justify-content-end">
-        {% picture about-me vision.png --alt unsere Geschichte %}
+        {% picture vision.png --alt unsere Geschichte %}
       </div>
       <div class="col-md-6">
         <div class="card-body p-4 px-lg-5">
