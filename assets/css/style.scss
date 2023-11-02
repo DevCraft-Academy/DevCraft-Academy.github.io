@@ -506,7 +506,11 @@ ul {
 }
 
 .employee {
-  margin: $spacer
+  margin: $spacer 0;
+
+  @include media-breakpoint-up("md") {
+    margin: $spacer;
+  }
 }
 
 .message {
