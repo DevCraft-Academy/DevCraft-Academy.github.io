@@ -30,7 +30,7 @@ header {
     gap: $spacer;
 
     &,
-    &:hover,
+    &:hover
     &:active {
       color: inherit;
       text-decoration: none;
@@ -424,6 +424,15 @@ footer {
 
   p:last-child {
     margin-bottom: 0;
+  }
+}
+
+.impressum-link {
+  color: white;
+  text-decoration: underline;
+
+  &:hover {
+    color: $yellow;
   }
 }
 
