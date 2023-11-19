@@ -1,6 +1,7 @@
 ---
 layout: marketing-funnel-layout
-title: danke
+title: danke fuer deine teilnahme
+permalink: /quiz-danke/
 ---
 
 
