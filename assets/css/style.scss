@@ -598,16 +598,3 @@ ul {
   overflow-wrap: break-word;
 }
 
-.btn-quiz {
-  background-color: $yellow;
-
-  &:hover {
-    background-color: $orange-500;
-  }
-
-  &:active {
-    background-color: $pink-500;
-  }
-}
-
-// .btn-check:checked + .btn, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show
