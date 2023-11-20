@@ -470,6 +470,12 @@ footer {
   }
 }
 
+.impressum-funnel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .thank-you {
   padding-left: $spacer;
   padding-right: $spacer;
