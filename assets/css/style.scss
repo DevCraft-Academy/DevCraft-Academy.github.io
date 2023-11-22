@@ -67,10 +67,15 @@ header {
   flex-direction: column;
   align-items: center;
 
-
   @include media-breakpoint-up("md") {
     flex-direction: row;
   }
+}
+
+.funnel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-cta-button {
@@ -598,3 +603,6 @@ ul {
   overflow-wrap: break-word;
 }
 
+.gab {
+  gap: $spacer;
+}
