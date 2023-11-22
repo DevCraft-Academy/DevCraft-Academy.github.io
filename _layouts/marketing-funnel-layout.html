@@ -9,6 +9,7 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-K493TCNV');</script>
   <!-- End Google Tag Manager -->
+  <script src="../quiz-funnel.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -38,6 +39,10 @@
       <a class="impressum-link" href="/dsgvo.html" target="_blank">Datenschutzerklärung</a>
     </div>
   </footer>
+  {% if page.javascript %}
+  <script>
+      {{ page.javascript | safe }}
+  </script>
+  {% endif %}
 </body>
-
 </html>
