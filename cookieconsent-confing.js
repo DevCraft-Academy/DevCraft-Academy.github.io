@@ -37,27 +37,21 @@ CookieConsent.run({
     },
 
     onFirstConsent: ({cookie}) => {
-        console.log('onFirstConsent fired',cookie);
     },
 
     onConsent: ({cookie}) => {
-        console.log('onConsent fired!', cookie)
     },
 
     onChange: ({changedCategories, changedServices}) => {
-        console.log('onChange fired!', changedCategories, changedServices);
     },
 
     onModalReady: ({modalName}) => {
-        console.log('ready:', modalName);
     },
 
     onModalShow: ({modalName}) => {
-        console.log('visible:', modalName);
     },
 
     onModalHide: ({modalName}) => {
-        console.log('hidden:', modalName);
     },
 
     categories: {
@@ -95,9 +89,9 @@ CookieConsent.run({
     },
 
     language: {
-        default: 'en',
+        default: 'de',
         translations: {
-            en: {
+            de: {
                 consentModal: {
                     title: 'Als Entwickler:in kennst du das ja: Wir wollen deine Kekse.  &#128521;',
                     description: 'Aber ernsthaft: Wir würden gerne verstehen, wie unsere Seite genutzt wird. Indem du Cookies akzeptierst, hilfst du uns, sie noch besser für andere Entwickler:innen zu gestalten. Wir versprechen dir, nur unbedingt notwendige Daten zu erfassen und behutsam damit umzugehen. Mehr dazu findest du in unserer Datenschutzerklärung.',
@@ -118,10 +112,10 @@ CookieConsent.run({
                     sections: [
                         {
                             title: '',
-                            description: 'Hier kannst du der Setzung einzelner Cookies, die auf dieser Domain und ihren Subdomains verwendet werden, zustimmen oder ablehnen. Du kannst deine Cookie-Einstellungen jederzeit ändern, nutze dazu bitte den Link „Cookie-Einstellungen“ im Footer der Webseite unter dem Link zur Datenschutzerklärung.'
+                            description: 'Hier kannst du zustimmen oder ablehnen, dass einzelne Cookies auf dieser Domain und ihren Subdomains verwendet werden, zustimmen oder ablehnen. Du kannst deine Cookie-Einstellungen jederzeit ändern, nutze dazu bitte den Link „Cookie-Einstellungen“ im Footer der Webseite unter dem Link zur Datenschutzerklärung.'
                         },
                         {
-                            title: 'notwendige Cookies',
+                            title: 'Notwendige Cookies',
                             description: 'Diese Cookies sind für das ordnungsgemäße Funktionieren der Website unerlässlich und können nicht deaktiviert werden.',
 
                             //this field will generate a toggle linked to the 'necessary' category
@@ -166,35 +160,4 @@ CookieConsent.run({
             }
         }
     },
-
-    // Set status of the services provided the user has not set the status yet
-    onConsent: function(){
-        if(CookieConsent.acceptedCategory('analytics')){
-            // Analytics category enabled
-        }
-
-        if(CookieConsent.acceptedService('Google Analytics', 'analytics')){
-            // Google Analytics enabled
-        }
-    },
-
-    // Change the status of the services provided the user has already set the status once
-    onChange: function({changedCategories, changedServices}){
-        if(changedCategories.includes('analytics')){
-
-            if(CookieConsent.acceptedCategory('analytics')){
-                // Analytics category was just enabled
-            }else{
-                // Analytics category was just disabled
-            }
-
-            if(changedServices['analytics'].includes('Google Analytics')){
-                if(CookieConsent.acceptedService('Google Analytics', 'analytics')){
-                    // Google Analytics was just enabled
-                }else{
-                    // Google Analytics was just disabled
-                }
-            }
-        }
-    }
 });
