@@ -606,3 +606,12 @@ ul {
 .gab {
   gap: $spacer;
 }
+
+.continue-button {
+  color: white;
+  text-decoration-line: none;
+
+  &:hover {
+    color: $yellow;
+  }
+}

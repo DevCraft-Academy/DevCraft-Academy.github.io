@@ -12,6 +12,9 @@ javascript: |
             const selectedAnswer = event.target.value;
             
             saveAnswer(questionId, selectedAnswer);
+
+            const isChecked = [...answerOptions].some(option => option.checked);
+            quiz3Button.disabled = !isChecked;
         });
     });
     });
