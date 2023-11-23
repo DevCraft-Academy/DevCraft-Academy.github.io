@@ -1,19 +1,20 @@
 <section class="primary claim container">
     <h1 class="display-6">
-        <strong>Ergebnisse</strong>
+        <strong>Vielen Dank für Deine Antworten!</strong>
     </h1>
+    <p class="display-6" id="resultMessage"></p>
 </section>
-<div class="container">
-    <div class="card overflow-hidden">
-        <h2>Deine Antworten:</h2>
-        <ul id="userAnswersList"></ul>
+<div id="resultText" style="display: none;">
+    <section class="cta-steps container text-center" id="scheduleCTA" style="display: none;">
+        <h3 class="display-6"><strong>Nutze ein kostenloses Erstgespräch,</strong>
+                <br />
+            um deine Karriere im Web Developmet zu beleuchten.</h3>
+        <!-- Calendly Inline-Widget Beginn -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/devcraftacademy/erstgesprach" style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly Inline-Widget Ende -->
+        <p class="lead">Werde einer der besten Senior Developers weltweit!</p>
+    </section>  
+</div>       
 
-        <h2>Korrekte Antworten:</h2>
-        <ul id="correctAnswersList"></ul>
 
-        <div id="resultText" style="display: none;">
-            <p id="resultMessage"></p>
-            <a href="/rueckruf/" id="scheduleButton" class="btn btn-primary btn-lg" style="display: none;">Termin vereinbaren</a>
-        </div>
-    </div>
-</div>

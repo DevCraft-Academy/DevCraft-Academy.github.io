@@ -25,8 +25,6 @@ function saveAnswer(questionId, answer) {
     storedUserAnswers[questionId].push(answer);
 
     localStorage.setItem('userAnswers', JSON.stringify(storedUserAnswers));
-
-    console.log('Gespeicherte Antworten:', storedUserAnswers);
 }
 
 // Funktion zum Vergleichen der Benutzerantworten mit den korrekten Antworten
@@ -54,45 +52,19 @@ function checkAnswers() {
 }
 
 function showResults() {
-    const userAnswersList = document.getElementById("userAnswersList");
-    const correctAnswersList = document.getElementById("correctAnswersList");
     const resultText = document.getElementById("resultText");
     const resultMessage = document.getElementById("resultMessage");
-    const scheduleButton = document.getElementById("scheduleButton");
+    const scheduleCTA = document.getElementById("scheduleCTA");
 
     // Ergebnisse vergleichen
     const correctCount = checkAnswers();
 
-    // Zeige Benutzerantworten
-    for (const questionId in userAnswers) {
-        if (userAnswers.hasOwnProperty(questionId)) {
-            const userAnswer = userAnswers[questionId];
-            const userAnswerListItem = document.createElement("li");
-            userAnswerListItem.textContent = `Frage ${questionId}: ${userAnswer.join(", ")}`;
-            userAnswersList.appendChild(userAnswerListItem);
-        }
-    }
-
-    console.log('User Answers:', userAnswers);
-
-    // Zeige korrekte Antworten
-    for (const questionId in correctAnswers) {
-        if (correctAnswers.hasOwnProperty(questionId)) {
-            const correctAnswer = correctAnswers[questionId];
-            const correctAnswerListItem = document.createElement("li");
-            correctAnswerListItem.textContent = `Frage ${questionId}: ${correctAnswer.join(", ")}`;
-            correctAnswersList.appendChild(correctAnswerListItem);
-        }
-    }
-
-    // console.log('User Answers:', userAnswers);
-
     // Entscheide, welcher Text und Button angezeigt werden sollen, basierend auf den Ergebnissen
     if (correctCount === Object.keys(userAnswers).length) {
-        resultMessage.textContent = "Du erfüllst unsere Kriterien";
-        scheduleButton.style.display = "block";
+        resultMessage.textContent = "Herzlichen Glückwunsch, Du erfüllst unsere Anforderungen für eine Teilnahme!";
+        scheduleCTA.style.display = "block";
     } else {
-        resultMessage.textContent = "Leider erfüllst du unsere Anforderungen nicht";
+        resultMessage.textContent = "Tut uns leid, leider erfüllst du unsere Anforderungen für eine Teilnahme nicht! Wir wünschen Dir viel Erfolg für Deinen weiteren beruflichen Weg.";
     }
 
     // Zeige das Ergebnis
