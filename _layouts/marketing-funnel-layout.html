@@ -15,7 +15,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   {% seo %}
   <link rel="preconnect" href="https://fast.vidalytics.com" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/marketing-funnel-style.css" />
   <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg" />
 </head>
 
@@ -24,12 +24,10 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K493TCNV"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
-  <header>
-    <div class="funnel-container">
-      <div class="navigation gab">
-        {% svg /assets/images/logo.svg width=45 %}
-        <div class="h2">DevCraft Academy</div>
-      </div>
+  <header class="navbar">
+    <div class="container justify-content-start gap-3">
+      {% svg /assets/images/logo.svg width=45 %}
+      <div class="h2 mb-0">DevCraft Academy</div>
     </div>
   </header>
   {{ content }}
