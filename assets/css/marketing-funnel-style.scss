@@ -4,3 +4,16 @@
 @use "sass:map";
 
 @import "./theme/theme.scss";
+
+.gab {
+    gap: $spacer;
+  }
+  
+  .continue-button {
+    color: white;
+    text-decoration-line: none;
+  
+    &:hover {
+      color: $yellow;
+    }
+  }

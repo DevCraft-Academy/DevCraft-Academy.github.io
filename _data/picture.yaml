@@ -8,9 +8,9 @@ media_queries:
 
 presets:
   about-me:
-    formats: [avif, original]
+    formats: [jpg, original]
     format_quality:
-      avif: 50
+      jpg: 50
       original: 80
     widths: [800, 1200, 1600, 3200]
     sizes:
@@ -24,9 +24,9 @@ presets:
       img: 'loading="lazy" decoding="async"'
 
   thank-you-portrait:
-    formats: [avif, original]
+    formats: [jpg, original]
     format_quality:
-      avif: 40
+      jpg: 40
       original: 80
     widths: [800, 1200, 1600, 3200]
     sizes:
@@ -38,9 +38,9 @@ presets:
       xxl: 60rem
 
   testimonial:
-    formats: [avif, original]
+    formats: [jpg, original]
     format_quality:
-      avif: 80
+      jpg: 80
       original: 80
     widths: [400, 800, 1200, 1600]
     sizes:
@@ -54,9 +54,9 @@ presets:
       img: 'loading="lazy" decoding="async" class="img-fluid rounded-start profile-picture"'
 
   testimonial-screenshot:
-    formats: [avif, original]
+    formats: [jpg, original]
     format_quality:
-      avif: 40
+      jpg: 40
       original: 80
     widths: [400, 800, 1200, 1600]
     sizes:

@@ -1,3 +1,8 @@
+---
+layout: marketing-funnel-layout
+title: quiz-5
+---
+
 <section class="primary claim container">
     <div class="progress">
         <div class="progress-bar" role="progressbar" style="width: 83.1%" aria-valuenow="83.1" aria-valuemin="0" aria-valuemax="100"></div>
@@ -32,3 +37,18 @@
 <div class="cta-box box-mt-10">
   <button id="quiz5Button" disabled class="btn btn-primary btn-lg"><a class="continue-button" href="/quiz-6/">Weiter</a></button>
 </div>
+<script>    document.addEventListener('DOMContentLoaded', function() {
+  const answerOptions = document.querySelectorAll('input[name="quiz-5"]');
+  
+  answerOptions.forEach(option => {
+      option.addEventListener('change', function(event) {
+          const questionId = 'quiz-5';
+          const selectedAnswer = event.target.value;
+          
+          saveAnswer(questionId, selectedAnswer);
+
+          const isChecked = [...answerOptions].some(option => option.checked);
+          quiz5Button.disabled = !isChecked;
+      });
+  });
+  });</script>

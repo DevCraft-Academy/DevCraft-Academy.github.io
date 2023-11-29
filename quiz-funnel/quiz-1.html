@@ -1,3 +1,8 @@
+---
+layout: marketing-funnel-layout
+title: quiz-1
+---
+
 <section class="primary claim container">
     <h1 class="display-6">
       <strong>Neugierig geworden?</strong>
@@ -39,3 +44,18 @@
 <div class="cta-box box-mt-10">
   <button id="quiz1Button" disabled class="btn btn-primary btn-lg"><a class="continue-button" href="/quiz-2/">Weiter</a></button>
 </div>
+<script>    document.addEventListener('DOMContentLoaded', function() {
+  const answerOptions = document.querySelectorAll('input[name="quiz-1"]');
+  
+  answerOptions.forEach(option => {
+      option.addEventListener('change', function(event) {
+          const questionId = 'quiz-1';
+          const selectedAnswer = event.target.value;
+          
+          saveAnswer(questionId, selectedAnswer);
+
+          const isChecked = [...answerOptions].some(option => option.checked);
+          quiz1Button.disabled = !isChecked;
+      });
+  });
+  });</script>
