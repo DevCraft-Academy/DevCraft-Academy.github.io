@@ -8,7 +8,7 @@ title: quiz-6
       <div class="row g-0">
         <div class="col-md-6 story-position">
           <div class="card-body p-4 px-lg-5">
-            <h2>Unsere Weiterbildung dauert 6 Monate. Wie viel kannst du monatlich dafür investieren?</h2>
+            <h2>Was ist dir eine 6 Monate lange Weiterbildung für deinen beruflichen Erfolg wert?</h2>
           </div>
         </div>
 
@@ -16,13 +16,13 @@ title: quiz-6
             <form class="d-flex flex-column">
     
                 <input type="radio" class="btn-check" name="quiz-6" id="up-1000" value="up-1000" autocomplete="off">
-                <label class="btn btn-outline-primary mx-2 mt-4 my-2" for="up-1000">1000€ -1500€</label>
+                <label class="btn btn-outline-primary mx-2 mt-4 my-2" for="up-1000">unter 1000€</label>
     
                 <input type="radio" class="btn-check" name="quiz-6" id="up-1500" value="up-1500" autocomplete="off">
-                <label class="btn btn-outline-primary mx-2 my-2" for="up-1500">1500€ -2000€</label>
+                <label class="btn btn-outline-primary mx-2 my-2" for="up-1500">1000€ - 10.000€</label>
     
                 <input type="radio" class="btn-check" name="quiz-6" id="over-2000" value="over-2000" autocomplete="off">
-                <label class="btn btn-outline-primary mx-2 mt-2 mb-4" for="over-2000">Über 2000€</label>
+                <label class="btn btn-outline-primary mx-2 mt-2 mb-4" for="over-2000">über 10.000€</label>
 
             </form>
         </div>
@@ -37,7 +37,7 @@ title: quiz-6
       <div class="card-body">
         <div class="row justify-content-md-center align-items-md-center text-center text-md-start">
           <div class="col-md-auto">
-            <a class="btn btn-primary btn-transition" id="quiz6Button" disabled href="/quiz-funnel/ende">Ergebnis</a>
+            <button class="btn btn-primary btn-transition" id="quiz5Button" disabled><a class="button-link" href="/quiz-funnel/ende">Ergebnis</a></button>
           </div>
         </div>
 
@@ -72,7 +72,7 @@ title: quiz-6
           saveAnswer(questionId, selectedAnswer);
 
           const isChecked = [...answerOptions].some(option => option.checked);
-          quiz6Button.disabled = !isChecked;
+          quiz5Button.disabled = !isChecked;
       });
   });
   });</script>

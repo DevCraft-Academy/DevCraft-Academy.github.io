@@ -42,3 +42,13 @@
       color: $yellow;
     }
   }
+
+.button-link {
+    color: white;
+    text-decoration: none;
+  
+    &:hover {
+      color: $yellow;
+    }
+  }
+  
