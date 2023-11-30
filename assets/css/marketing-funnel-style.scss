@@ -5,11 +5,36 @@
 
 @import "./theme/theme.scss";
 
+.header-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.impressum-funnel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: $spacer*4 0;
+}
+
+.impressum-link {
+  color: $teal;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $yellow;
+    padding: 0.125em;
+
+  }
+
+}
+
 .gab {
     gap: $spacer;
   }
   
-  .continue-button {
+.continue-button {
     color: white;
     text-decoration-line: none;
   
