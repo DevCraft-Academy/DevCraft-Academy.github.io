@@ -3,55 +3,78 @@ layout: marketing-funnel-layout
 title: quiz-2
 ---
 
-<section class="primary claim container">
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: 33.3%" aria-valuenow="33.3" aria-valuemin="0" aria-valuemax="100"></div>
-    </div>
-</section>
-<div class="container">
+<div class="container mt-10">
     <div class="card overflow-hidden">
       <div class="row g-0">
         <div class="col-md-6 story-position">
           <div class="card-body p-4 px-lg-5">
-            <h2>Wie viel Berufserfahrung hast du im Software Development?</h2>
+            <h2>In welchem Bereich des Software Development bist du tätig</h2>
           </div>
         </div>
 
         <div class="col-md-6 d-flex flex-column justify-content-center">
             <form class="d-flex flex-column">
-                <input type="radio" class="btn-check" name="quiz-2" id="no-job" value="no-job" autocomplete="off">
-                <label class="btn btn-outline-primary mx-2 mt-4 mb-2" for="no-job">keine Berufserfahrung</label>
     
-                <input type="radio" class="btn-check" name="quiz-2" id="less-6-month" value="less-6-month" autocomplete="off">
-                <label class="btn btn-outline-primary mx-2 my-2" for="less-6-month">weniger als 6 Monate</label>
+                <input type="radio" class="btn-check" name="quiz-3" id="web-development" value="web-development" autocomplete="off">
+                <label class="btn btn-outline-primary mx-2 mt-4 my-2" for="web-development">Web Development</label>
     
-                <input type="radio" class="btn-check" name="quiz-2" id="up-12-month" value="up-12-month" autocomplete="off">
-                <label class="btn btn-outline-primary mx-2 my-2" for="up-12-month">6-12 Monate</label>
+                <input type="radio" class="btn-check" name="quiz-3" id="mobile-app" value="mobile-app" autocomplete="off">
+                <label class="btn btn-outline-primary mx-2 my-2" for="mobile-app">Mobile App Development</label>
     
-                <input type="radio" class="btn-check" name="quiz-2" id="over-12-month" value="over-12-month" autocomplete="off">
-                <label class="btn btn-outline-primary mx-2 mt-2 mb-4" for="over-12-month">über 12 Monate</label>
+                <input type="radio" class="btn-check" name="quiz-3" id="app-development" value="app-development" autocomplete="off">
+                <label class="btn btn-outline-primary mx-2 my-2" for="app-development">Applikation Development</label>
+
+                <input type="radio" class="btn-check" name="quiz-3" id="other-field" value="other-field" autocomplete="off">
+                <label class="btn btn-outline-primary mx-2 mt-2 mb-4" for="other-field">Anderes</label>                
     
             </form>
         </div>
       </div>
     </div>
 </div>
-<div class="cta-box box-mt-10">
-  <button id="quiz2Button" disabled class="btn btn-primary btn-lg"><a class="continue-button" href="/quiz-3/">Weiter</a></button>
+<!-- CTA -->
+<div class="container mt-4">
+  <div class="w-lg-75 mx-lg-auto">
+    <div class="card card-sm overflow-hidden">
+      <!-- Card -->
+      <div class="card-body">
+        <div class="row justify-content-md-center align-items-md-center text-center text-md-start">
+          <div class="col-md-auto">
+            <a class="btn btn-primary btn-transition" href="/quiz-funnel/quiz-3">Weiter</a>
+          </div>
+        </div>
+
+        <!-- SVG Shape -->
+        <figure class="w-25 d-none d-md-block position-absolute top-0 start-0 mt-n2">
+          <svg viewBox="0 0 451 902" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.125" d="M0 82C203.8 82 369 247.2 369 451C369 654.8 203.8 820 0 820" stroke="url(#paint2_linear)" stroke-width="164" stroke-miterlimit="10"/>
+            <defs>
+              <linearGradient id="paint2_linear" x1="323.205" y1="785.242" x2="-97.6164" y2="56.3589" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="white" stop-opacity="0"/>
+                <stop offset="1" stop-color="#377dff"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </figure>
+        <!-- End SVG Shape -->
+      </div>
+      <!-- End Card -->
+    </div>
+  </div>
 </div>
+<!-- End CTA -->
 <script>    document.addEventListener('DOMContentLoaded', function() {
-  const answerOptions = document.querySelectorAll('input[name="quiz-2"]');
+  const answerOptions = document.querySelectorAll('input[name="quiz-3"]');
   
   answerOptions.forEach(option => {
       option.addEventListener('change', function(event) {
-          const questionId = 'quiz-2';
+          const questionId = 'quiz-3';
           const selectedAnswer = event.target.value;
           
           saveAnswer(questionId, selectedAnswer);
 
           const isChecked = [...answerOptions].some(option => option.checked);
-          quiz2Button.disabled = !isChecked;
+          quiz3Button.disabled = !isChecked;
       });
   });
   });</script>
-
