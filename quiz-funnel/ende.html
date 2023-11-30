@@ -7,21 +7,24 @@ title: end
     <h2 class="mb-10 display-6">
         Vielen Dank für Deine Antworten!
     </h2>
-    <h2 id="resultMessage"></h2>
+    <h3 id="correctQuiz1" class="mb-4"></h3>
+    <h3 id="quiz1Message" class="mb-4"></h3>
+    <h3 id="quiz2Message" class="mb-4"></h3>
+    <h3 id="quiz4Message" class="mb-4"></h3>
+    <h3 id="quiz5Message" class="mb-4"></h3>
 </section>
 
-<div id="resultText" style="display: none;">
-    <section class="cta-steps container text-center" id="scheduleCTA" style="display: none;">
-        <h3><strong>Nutze ein kostenloses Erstgespräch,</strong>
-                <br />
-            um deine Karriere im Web Developmet zu beleuchten.</h3>
-        <!-- Calendly Inline-Widget Beginn -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/devcraftacademy/erstgesprach" style="min-width:320px;height:700px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly Inline-Widget Ende -->
-        <p class="lead">Werde einer der besten Senior Developers weltweit!</p>
-    </section>  
-</div>       
+
+<section class="cta-steps container text-center">
+    <h2 id="correctQuiz2"></h2>
+    <h2 id="falseQuiz"></h2>
+    <!-- Calendly Inline-Widget Beginn -->
+    <div class="calendly-inline-widget" data-url="https://calendly.com/devcraftacademy/erstgesprach" style="min-width:320px;height:700px;"></div>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <!-- Calendly Inline-Widget Ende -->
+    <p class="lead">Werde einer der besten Senior Developers weltweit!</p>
+</section>  
+      
 <script>    function loadUserAnswersFromLocalStorage() {
     const storedUserAnswers = localStorage.getItem('userAnswers');
     if (storedUserAnswers) {
