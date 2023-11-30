@@ -15,13 +15,13 @@ title: quiz-4
         <div class="col-md-6 d-flex flex-column justify-content-center">
             <form class="d-flex flex-column">
     
-                <input type="radio" class="btn-check" name="quiz-5" id="up-30-minutes" value="up-30-minutes" autocomplete="off">
+                <input type="radio" class="btn-check" name="quiz-4" id="up-30-minutes" value="up-30-minutes" autocomplete="off">
                 <label class="btn btn-outline-primary mx-2 mt-4 my-2" for="up-30-minutes"> bis 30 Minuten</label>
     
-                <input type="radio" class="btn-check" name="quiz-5" id="up-60-minutes" value="up-60-minutes" autocomplete="off">
+                <input type="radio" class="btn-check" name="quiz-4" id="up-60-minutes" value="up-60-minutes" autocomplete="off">
                 <label class="btn btn-outline-primary mx-2 my-2" for="up-60-minutes">30-60 Minuten</label>
     
-                <input type="radio" class="btn-check" name="quiz-5" id="over-60-minutes" value="over-60-minutes" autocomplete="off">
+                <input type="radio" class="btn-check" name="quiz-4" id="over-60-minutes" value="over-60-minutes" autocomplete="off">
                 <label class="btn btn-outline-primary mx-2 mt-2 mb-4" for="over-60-minutes">über 60 Minuten</label>
 
             </form>
@@ -61,11 +61,11 @@ title: quiz-4
 </div>
 <!-- End CTA -->
 <script>    document.addEventListener('DOMContentLoaded', function() {
-  const answerOptions = document.querySelectorAll('input[name="quiz-5"]');
+  const answerOptions = document.querySelectorAll('input[name="quiz-4"]');
   
   answerOptions.forEach(option => {
       option.addEventListener('change', function(event) {
-          const questionId = 'quiz-5';
+          const questionId = 'quiz-4';
           const selectedAnswer = event.target.value;
           
           saveAnswer(questionId, selectedAnswer);

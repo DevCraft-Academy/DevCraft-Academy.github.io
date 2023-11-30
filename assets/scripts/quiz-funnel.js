@@ -1,12 +1,11 @@
 // Object for storing correct answers
 let userAnswers = {};
 const correctAnswers = {
-    "quiz-1": ["no-education", "up-6-month", "up-12-month", "over-12-month"],
-    "quiz-2": ["up-12-month", "over-12-month"],
-    "quiz-3": ["web-development"],
-    "quiz-4": ["senior-level", "mid-level", "junior-level"],
-    "quiz-5": ["up-60-minutes", "over-60-minutes"],
-    "quiz-6": ["up-1000", "up-1500", "over-2000"],
+    "quiz-1": ["up-12-month", "over-12-month"],
+    "quiz-2": ["web-development"],
+    "quiz-3": ["senior-level", "intermediate-level", "junior-intermedite"],
+    "quiz-4": ["up-60-minutes", "over-60-minutes"],
+    "quiz-5": ["1000-10000", "over-10000"],
 };
 
 // Function to save user answers

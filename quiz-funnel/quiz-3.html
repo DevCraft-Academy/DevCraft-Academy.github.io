@@ -15,14 +15,14 @@ title: quiz-3
         <div class="col-md-6 d-flex flex-column justify-content-center">
             <form class="d-flex flex-column">
     
-                <input type="radio" class="btn-check" name="quiz-4" id="senior-level" value="senior-level" autocomplete="off">
+                <input type="radio" class="btn-check" name="quiz-3" id="senior-level" value="senior-level" autocomplete="off">
                 <label class="btn btn-outline-primary mx-2 mt-4 my-2" for="senior-level">Senior Level</label>
     
-                <input type="radio" class="btn-check" name="quiz-4" id="mid-level" value="mid-level" autocomplete="off">
-                <label class="btn btn-outline-primary mx-2 my-2" for="mid-level">Mid-Level</label>
+                <input type="radio" class="btn-check" name="quiz-3" id="intermediate-level" value="intermediate-level" autocomplete="off">
+                <label class="btn btn-outline-primary mx-2 my-2" for="intermediate-level">Intermediate Level</label>
     
-                <input type="radio" class="btn-check" name="quiz-4" id="junior-level" value="junior-level" autocomplete="off">
-                <label class="btn btn-outline-primary mx-2 mt-2 mb-4" for="junior-level">Junior Level</label>
+                <input type="radio" class="btn-check" name="quiz-3" id="junior-intermedite" value="junior-intermedite" autocomplete="off">
+                <label class="btn btn-outline-primary mx-2 mt-2 mb-4" for="junior-intermedite">Junior Intermediate Level</label>
 
             </form>
         </div>
@@ -62,11 +62,11 @@ title: quiz-3
 <!-- End CTA -->
 
 <script>    document.addEventListener('DOMContentLoaded', function() {
-  const answerOptions = document.querySelectorAll('input[name="quiz-4"]');
+  const answerOptions = document.querySelectorAll('input[name="quiz-3"]');
   
   answerOptions.forEach(option => {
       option.addEventListener('change', function(event) {
-          const questionId = 'quiz-4';
+          const questionId = 'quiz-3';
           const selectedAnswer = event.target.value;
           
           saveAnswer(questionId, selectedAnswer);

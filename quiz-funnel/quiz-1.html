@@ -19,16 +19,16 @@ title: quiz-1
 
         <div class="col-md-6 d-flex flex-column justify-content-center">
             <form class="d-flex flex-column">
-                <input type="radio" class="btn-check" name="quiz-2" id="no-job" value="no-job" autocomplete="off">
+                <input type="radio" class="btn-check" name="quiz-1" id="no-job" value="no-job" autocomplete="off">
                 <label class="btn btn-outline-primary mx-2 mt-4 mb-2" for="no-job">keine Erfahrung</label>
     
-                <input type="radio" class="btn-check" name="quiz-2" id="less-6-month" value="less-6-month" autocomplete="off">
+                <input type="radio" class="btn-check" name="quiz-1" id="less-6-month" value="less-6-month" autocomplete="off">
                 <label class="btn btn-outline-primary mx-2 my-2" for="less-6-month">weniger als 6 Monate</label>
     
-                <input type="radio" class="btn-check" name="quiz-2" id="up-12-month" value="up-12-month" autocomplete="off">
+                <input type="radio" class="btn-check" name="quiz-1" id="up-12-month" value="up-12-month" autocomplete="off">
                 <label class="btn btn-outline-primary mx-2 my-2" for="up-12-month">6-12 Monate</label>
     
-                <input type="radio" class="btn-check" name="quiz-2" id="over-12-month" value="over-12-month" autocomplete="off">
+                <input type="radio" class="btn-check" name="quiz-1" id="over-12-month" value="over-12-month" autocomplete="off">
                 <label class="btn btn-outline-primary mx-2 mt-2 mb-4" for="over-12-month">über 12 Monate</label>
     
             </form>
@@ -69,11 +69,11 @@ title: quiz-1
 </div>
 <!-- End CTA -->
 <script>    document.addEventListener('DOMContentLoaded', function() {
-  const answerOptions = document.querySelectorAll('input[name="quiz-2"]');
+  const answerOptions = document.querySelectorAll('input[name="quiz-1"]');
   
   answerOptions.forEach(option => {
       option.addEventListener('change', function(event) {
-          const questionId = 'quiz-2';
+          const questionId = 'quiz-1';
           const selectedAnswer = event.target.value;
           
           saveAnswer(questionId, selectedAnswer);
