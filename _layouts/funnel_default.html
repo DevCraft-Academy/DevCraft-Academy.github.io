@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K493TCNV');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  {% seo %}
+  <link rel="preconnect" href="https://fast.vidalytics.com" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg" />
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K493TCNV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="container header-direction">
+      <div class="navigation">
+        {% include logo_button.html text="In Rekordzeit zum Senior" %}
+        {% include navigation.html %}
+      </div>
+      <div class="nav-cta-button">{% include funnel_cta_button.html text="Lass uns schauen" %}</div>
+    </div>
+  </header>
+  {{ content }}
+  <footer>
+    <div class="container">
+      <h2>Mit Liebe in Wien gemacht von der</h2>
+      <p>
+        Helmcraft GmbH<br />
+        Hietzinger Hauptstraße 101/1<br />
+        1130 Wien<br />
+        Österreich
+      </p>
+      <p>Geschäftsführer:innen: Clemens Helm und Carola Helm</p>
+      <p>
+        <small>
+          Dienstleistungen in der Datenverarbeitung und Informationstechnik,
+          insbesondere die Software-Entwicklung<br />
+          UID-Nr: ATU78631027<br />
+          Firmenbuchnummer 588989 k<br />
+          Handelsgericht Wien<br />
+        </small>
+      </p>
+      <p>
+        <small>
+          Mitglied der Wirtschaftskammer für Wien, Kammernummer 892504<br />
+          Fachgruppe: Unternehmensberatung, Buchhaltung und
+          Informationstechnologie<br />
+          (Gewerbe-)Behörde gem. ECG: Magistratisches Bezirksamt des XIII.
+          Bezirkes<br />
+        </small>
+      </p>
+      <p>
+        <small>
+          Berufsrecht:
+          <a class="impressum-link"
+            href="https://www.ris.bka.gv.at/GeltendeFassung.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10001597" target="_blank">Gewerbeordnung</a>
+        </small>
+      </p>
+      <p>
+        <small>
+          Beschwerden kannst du an die
+          <a class="impressum-link" href="http://ec.europa.eu/odr" target="_blank">Online-Streitbeilegungsplattform der EU richten</a>. Oder du schreibst uns
+          einfach eine Mail an mail@devcraft.academy.
+        </small>
+      </p>
+      <a class="impressum-link" href="/dsgvo.html">Datenschutzerklärung</a>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        localStorage.removeItem('userAnswers');
+    });
+  </script>
+</body>
+</html>

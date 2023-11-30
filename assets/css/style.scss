@@ -61,7 +61,6 @@ header {
     }
   }
 
-
 .navigation {
   display: flex;
   flex-direction: column;
@@ -79,7 +78,6 @@ header {
     margin-top: 0;
   }
 }
-
 
 .menulink {
     color: white;
@@ -101,6 +99,13 @@ header {
   >div {
     border: 1px solid $teal-300;
   }
+}
+
+.funnel-cta-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: $spacer*2;
 }
 
 section,
