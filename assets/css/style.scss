@@ -480,6 +480,20 @@ footer {
   align-items: center;
 }
 
+.funnel-impressum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $teal;
+  color: white;
+  padding-top: $spacer*2;
+  margin-bottom: -$spacer;
+  
+  @include media-breakpoint-up("lg") {
+    margin-bottom: -$spacer*6;
+  }
+}
+
 .thank-you {
   padding-left: $spacer;
   padding-right: $spacer;
