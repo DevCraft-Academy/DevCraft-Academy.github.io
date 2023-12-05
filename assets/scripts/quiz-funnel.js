@@ -18,10 +18,7 @@ function saveAnswer(questionId, answer) {
         storedUserAnswers = JSON.parse(storedUserAnswers);
     }
 
-    storedUserAnswers[questionId] = [];
-
-
-    storedUserAnswers[questionId].push(answer);
+    storedUserAnswers[questionId] = answer;
 
     localStorage.setItem('userAnswers', JSON.stringify(storedUserAnswers));
 }
@@ -29,24 +26,30 @@ function saveAnswer(questionId, answer) {
 // Feature to compare user answers with correct answers
 function checkAnswers() {
     let correctCount = 0;
-    for (const questionId in userAnswers) {
-        if (userAnswers.hasOwnProperty(questionId)) {
-            const userAnswer = userAnswers[questionId];
-            const correctAnswer = correctAnswers[questionId];
 
-            if (Array.isArray(correctAnswer)) {
-                // Check if any of the user answers are included in the correct answers
-                if (correctAnswer.some(answer => userAnswer.includes(answer))) {
-                    correctCount++;
-                }
-            } else {
-                // Check if there is only a single correct answer
-                if (userAnswer === correctAnswer) {
-                    correctCount++;
+    const storedUserAnswers = localStorage.getItem('userAnswers');
+
+    if (storedUserAnswers) {
+        const userAnswers = JSON.parse(storedUserAnswers);
+
+        for (const questionId in userAnswers) {
+            if (userAnswers.hasOwnProperty(questionId)) {
+                const userAnswer = userAnswers[questionId];
+                const correctAnswer = correctAnswers[questionId];
+
+                if (Array.isArray(correctAnswer)) {
+                    if (correctAnswer.includes(userAnswer)) {
+                        correctCount++;
+                    }
+                } else {
+                    if (userAnswer === correctAnswer) {
+                        correctCount++;
+                    }
                 }
             }
         }
     }
+
     return correctCount;
 }
 
@@ -56,30 +59,43 @@ function showResults() {
     const falseQuiz = document.getElementById("falseQuiz");
 
     // Show appropriate answers based on user responses
-    const quiz1Answers = userAnswers["quiz-1"];
-    const quiz2Answers = userAnswers["quiz-2"];
-    const quiz4Answers = userAnswers["quiz-4"];
-    const quiz5Answers = userAnswers["quiz-5"];
+    const quiz1Answers = document.getElementById("quiz1Message");
+    const quiz2Answers = document.getElementById("quiz2Message");
+    const quiz4Answers = document.getElementById("quiz4Message");
+    const quiz5Answers = document.getElementById("quiz5Message");
+
+
+    const storedUserAnswers = localStorage.getItem('userAnswers');
+
+    if (storedUserAnswers) {
+        const userAnswers = JSON.parse(storedUserAnswers);
+
+        // Überprüfung der gespeicherten Antworten für die entsprechenden Fragen
+        const quiz1Answer = userAnswers["quiz-1"];
+        const quiz2Answer = userAnswers["quiz-2"];
+        const quiz4Answer = userAnswers["quiz-4"];
+        const quiz5Answer = userAnswers["quiz-5"];
+
+        // Hier können die Bedingungen für jede Frage basierend auf den Antworten festgelegt werden
+        if (quiz1Answer && !correctAnswers["quiz-1"].includes(quiz1Answer)) {
+            quiz1Message.textContent = "Grundsätzlich brauchst Du mindestens 6 Monate Berufserfahrung.";
+        }
+
+        if (quiz2Answer && !correctAnswers["quiz-2"].includes(quiz2Answer)) {
+            quiz2Message.textContent = "Die Weiterbildung bezieht sich inhaltlich auf Full Stack Web Development. Wie es aussieht kommst du aus einem anderen Bereich, bist du sicher, dass du dich im Web Development weiterbilden möchtest?";
+        }
+
+        if (quiz4Answer && !correctAnswers["quiz-4"].includes(quiz4Answer)) {
+            quiz4Message.textContent = "Für einen erfolgreichen Abschluss, musst du bereit sein zumindest 1 Stunde täglich für die Weiterbildung aufzuwenden. Es ist nicht vorgesehen den Lehrgang in geblockten Einheiten durchzuführen.";
+        }
+
+        if (quiz5Answer && !correctAnswers["quiz-5"].includes(quiz5Answer)) {
+            quiz5Message.textContent = "Die sorgfältig geplante Weiterbildung strebt die Zugehörigkeit zu führenden Bildungsinstituten an und soll unseren Absolventen als Referenz dienen. Niedrigere Preise würden unsere Werte von Aktualität und Fachkompetenz gefährden.";
+        }
+    }
 
     // Compare results
     const correctCount = checkAnswers();
-
-   
-    if (quiz1Answers && !correctAnswers["quiz-1"].some(answer => quiz1Answers.includes(answer))) {
-        quiz1Message.textContent = "Grundsätzlich brauchst Du mindestens 6 Monate Berufserfahrung.";
-    }
-
-    if (quiz2Answers && !correctAnswers["quiz-2"].includes(quiz2Answers[0])) {
-        quiz2Message.textContent = "Die Weiterbildung bezieht sich inhaltlich auf Full Stack Web Development. Wie es aussieht kommst du aus einem anderen Bereich, bist du sicher, dass du dich im Web Development weiterbilden möchtest?";
-    }
-
-    if (quiz4Answers && !correctAnswers["quiz-4"].includes(quiz4Answers[0])) {
-        quiz4Message.textContent = "Für einen erfolgreichen Abschluss, musst du bereit sein zumindest 1 Stunde täglich für die Weiterbildung aufzuwenden. Es ist nicht vorgesehen den Lehrgang in geblockten Einheiten durchzuführen.";
-    }
-
-    if (quiz5Answers && !correctAnswers["quiz-5"].includes(quiz5Answers[0])) {
-        quiz5Message.textContent = "Die sorgfältig geplante Weiterbildung strebt die Zugehörigkeit zu führenden Bildungsinstituten an und soll unseren Absolventen als Referenz dienen. Niedrigere Preise würden unsere Werte von Aktualität und Fachkompetenz gefährden.";
-    }
 
     // Decide which text and button to display based on the results
     if (correctCount === Object.keys(userAnswers).length) {
