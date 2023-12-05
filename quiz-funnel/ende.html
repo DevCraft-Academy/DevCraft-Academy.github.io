@@ -281,17 +281,3 @@ title: end
     utm: {},
   });
 </script>
-<script>
-  function loadUserAnswersFromLocalStorage() {
-    const storedUserAnswers = localStorage.getItem("userAnswers");
-    if (storedUserAnswers) {
-      return JSON.parse(storedUserAnswers);
-    }
-    return {};
-  }
-
-  userAnswers = loadUserAnswersFromLocalStorage();
-  window.onload = function () {
-    showResults();
-  };
-</script>
