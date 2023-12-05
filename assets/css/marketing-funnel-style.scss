@@ -87,5 +87,33 @@
   }
 }
 
+.calendly-inline-widget {
+  overflow: hidden;
 
+  body {
+    overflow: hidden;
+  }
+}
+
+.calendly-inline-widget iframe {
+  height: calc(100vh - 50px);
+  width: 100%;
+  border: none;
+  overflow: hidden;
+
+  body {
+    overflow: hidden;
+  }
+}
   
+@media screen and (max-width: 767px) {
+  .calendly-inline-widget {
+      height: auto;
+  }
+
+  .calendly-inline-widget iframe {
+    height: 100vh;
+    overflow: hidden;
+}
+}
+
