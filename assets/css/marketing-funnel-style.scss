@@ -108,12 +108,21 @@
   
 @media screen and (max-width: 767px) {
   .calendly-inline-widget {
+<<<<<<< HEAD
       height: auto;
   }
 
   .calendly-inline-widget iframe {
     height: 100vh;
     overflow: hidden;
+=======
+      height: auto; /* Ändere die Höhe auf 'auto' für die mobile Ansicht */
+  }
+
+  .calendly-inline-widget iframe {
+    height: 100vh; /* Volle Bildschirmhöhe ohne Scrollbars */
+    overflow: hidden; /* Verhindert das Scrollen innerhalb des iFrames */
+>>>>>>> 5df8967c2e13ccbf58df6d4f1bdd290976054bb8
 }
 }
 
