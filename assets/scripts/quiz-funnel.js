@@ -94,15 +94,20 @@ function showResults() {
         }
     }
 
+    const totalQuestions = Object.keys(correctAnswers).length;
+
     // Compare results
     const correctCount = checkAnswers();
 
     // Decide which text and button to display based on the results
-    if (correctCount === Object.keys(userAnswers).length) {
+    if (correctCount === totalQuestions) {
         correctQuiz1.textContent = "Herzlichen Glückwunsch, Du erfüllst unsere Anforderungen für eine Teilnahme!";
         correctQuiz2.textContent = "Nutze ein kostenloses Erstgespräch, um deine Karriere im Web Development zu beleuchten.";
+        falseQuiz.textContent = "";
     } else {
         falseQuiz.textContent = "Wenn du denkst, dass du trotzdem an unserem Programm teilzunehmen kannst, dann vereinbare ein Gespräch mit uns, und wir klären das ab.";
+        correctQuiz1.textContent = "";
+        correctQuiz2.textContent = "";
     } 
 }
 

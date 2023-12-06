@@ -64,6 +64,12 @@
     }
   }
 
+  a.disabled {
+    pointer-events: none;
+    background-color: #006e89;
+    color: #fff;
+  }
+
 .story-position {
   display: flex;
   align-items: center;

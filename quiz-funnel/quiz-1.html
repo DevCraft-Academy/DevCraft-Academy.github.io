@@ -46,8 +46,7 @@ title: quiz-1
       <div class="card-body">
         <div class="row justify-content-md-center align-items-md-center text-center text-md-start">
           <div class="col-md-auto">
-            <button class="btn btn-primary btn-transition" id="quiz1Button" disabled><a class="button-link" href="/quiz-funnel/quiz-2">Weiter</a></button>
-          </div>
+            <a class="btn btn-primary btn-transition button-link disabled" id="quiz1Button" href="/quiz-funnel/quiz-2">Weiter</a>
         </div>
 
         <!-- SVG Shape -->
@@ -80,7 +79,7 @@ title: quiz-1
           saveAnswer(questionId, selectedAnswer);
 
           const isChecked = [...answerOptions].some(option => option.checked);
-          quiz1Button.disabled = !isChecked;
+          quiz1Button.classList.toggle('disabled', !isChecked);
       });
   });
   });</script>

@@ -40,7 +40,7 @@ title: quiz-2
       <div class="card-body">
         <div class="row justify-content-md-center align-items-md-center text-center text-md-start">
           <div class="col-md-auto">
-            <button class="btn btn-primary btn-transition" id="quiz2Button" disabled><a class="button-link" href="/quiz-funnel/quiz-3">Weiter</a></button>
+            <a class="btn btn-primary btn-transition button-link disabled" id="quiz2Button" href="/quiz-funnel/quiz-3">Weiter</a>
           </div>
         </div>
 
@@ -74,7 +74,7 @@ title: quiz-2
           saveAnswer(questionId, selectedAnswer);
 
           const isChecked = [...answerOptions].some(option => option.checked);
-          quiz2Button.disabled = !isChecked;
+          quiz2Button.classList.toggle('disabled', !isChecked);
       });
   });
   });</script>
