@@ -1,0 +1,116 @@
+---
+---
+
+@use "sass:map";
+
+@import "./theme/theme.scss";
+
+.funnel-container, .funnel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.funnel-header {
+  margin-top: $spacer;
+}
+
+.impressum-funnel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+      margin: $spacer*4 0;
+
+  @include media-breakpoint-up("md") {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+}
+
+.impressum-link {
+  color: $teal;
+  text-decoration: none;
+  margin-bottom: $spacer;
+
+  &:hover {
+    background-color: $yellow;
+    padding: 0.125em;
+
+  }
+
+}
+
+.gab {
+    gap: $spacer;
+  }
+  
+.continue-button {
+    color: white;
+    text-decoration-line: none;
+  
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+.button-link {
+    color: white;
+    text-decoration: none;
+  
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  a.disabled {
+    pointer-events: none;
+    background-color: #006e89;
+    color: #fff;
+  }
+
+.story-position {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-headline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefits-list {
+  padding: 0 $spacer;
+
+  @include media-breakpoint-up("md") {
+    padding: 0 0;
+  }
+}
+
+.after-life {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @include media-breakpoint-up("md") {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+  }
+}
+
+.calendly-inline-widget {
+  overflow: hidden;
+
+  body {
+    overflow: hidden;
+  }
+}
+
+.calendly-inline-widget iframe {
+  border: none;
+  overflow: hidden;
+}
+  

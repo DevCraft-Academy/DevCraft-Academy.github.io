@@ -1,5 +1,5 @@
---- 
---- 
+---
+---
 
 @use "sass:map";
 
@@ -49,7 +49,7 @@ header {
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .header-direction{
     display: flex;
     flex-direction: column;
@@ -61,12 +61,10 @@ header {
     }
   }
 
-
 .navigation {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 
   @include media-breakpoint-up("md") {
     flex-direction: row;
@@ -80,7 +78,6 @@ header {
     margin-top: 0;
   }
 }
-
 
 .menulink {
     color: white;
@@ -102,6 +99,13 @@ header {
   >div {
     border: 1px solid $teal-300;
   }
+}
+
+.funnel-cta-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: $spacer*2;
 }
 
 section,
@@ -470,6 +474,26 @@ footer {
   }
 }
 
+.impressum-funnel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.funnel-impressum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $teal;
+  color: white;
+  padding-top: $spacer*2;
+  margin-bottom: -$spacer;
+  
+  @include media-breakpoint-up("lg") {
+    margin-bottom: -$spacer*6;
+  }
+}
+
 .thank-you {
   padding-left: $spacer;
   padding-right: $spacer;
@@ -477,6 +501,29 @@ footer {
 
   img {
     width: 100%;
+  }
+}
+
+.thanks-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  @include media-breakpoint-up("md") {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.thanks-spacing {
+  margin-left: 0;
+  margin-top: $spacer*2;
+
+  @include media-breakpoint-up("md") {
+    margin-left: $spacer*2;
+    margin-top: 0;
   }
 }
 
@@ -574,6 +621,10 @@ ul {
   justify-content: center;
   align-items: center;
   padding-bottom: $spacer*10;
+}
+
+.box-mt-10 {
+  margin-top: $spacer*10;
 }
 
 .dsgvo-text {
