@@ -30,77 +30,22 @@ title: quiz-1
   </div>
 </div>
 
-<!-- CTA -->
-<div class="container mt-4">
-  <div class="w-lg-75 mx-lg-auto">
-    <div class="card card-sm overflow-hidden">
-      <!-- Card -->
-      <div class="card-body">
-        <div
-          class="row justify-content-md-center align-items-md-center text-center text-md-start"
-        >
-          <div class="col-md-auto">
-            <a
-              class="btn btn-primary btn-transition button-link disabled"
-              id="quiz1Button"
-              href="/quiz-funnel/quiz-2.html"
-              >Weiter</a
-            >
-          </div>
+{% include quiz/cta_button.html nextUrl="/quiz-funnel/quiz-2.html" %}
 
-          <!-- SVG Shape -->
-          <figure
-            class="w-25 d-none d-md-block position-absolute top-0 start-0 mt-n2"
-          >
-            <svg
-              viewBox="0 0 451 902"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                opacity="0.125"
-                d="M0 82C203.8 82 369 247.2 369 451C369 654.8 203.8 820 0 820"
-                stroke="url(#paint2_linear)"
-                stroke-width="164"
-                stroke-miterlimit="10"
-              />
-              <defs>
-                <linearGradient
-                  id="paint2_linear"
-                  x1="323.205"
-                  y1="785.242"
-                  x2="-97.6164"
-                  y2="56.3589"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop offset="0" stop-color="white" stop-opacity="0" />
-                  <stop offset="1" stop-color="#377dff" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </figure>
-          <!-- End SVG Shape -->
-        </div>
-        <!-- End Card -->
-      </div>
-    </div>
-  </div>
-  <!-- End CTA -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const answerOptions = document.querySelectorAll('input[name="quiz-1"]');
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const answerOptions = document.querySelectorAll('input[name="quiz-1"]');
 
-      answerOptions.forEach((option) => {
-        option.addEventListener("change", function (event) {
-          const questionId = "quiz-1";
-          const selectedAnswer = event.target.value;
+    answerOptions.forEach((option) => {
+      option.addEventListener("change", function (event) {
+        const questionId = "quiz-1";
+        const selectedAnswer = event.target.value;
 
-          saveAnswer(questionId, selectedAnswer);
+        saveAnswer(questionId, selectedAnswer);
 
-          const isChecked = [...answerOptions].some((option) => option.checked);
-          quiz1Button.classList.toggle("disabled", !isChecked);
-        });
+        const isChecked = [...answerOptions].some((option) => option.checked);
+        quizButton.classList.toggle("disabled", !isChecked);
       });
     });
-  </script>
-</div>
+  });
+</script>
