@@ -3,27 +3,45 @@ layout: marketing-funnel-layout
 title: end
 ---
 
-<section class="primary claim container my-10 text-center">
-  <h2 class="mb-10 display-6">Vielen Dank für Deine Antworten!</h2>
-  <h3 id="correctQuiz1" class="mb-4"></h3>
-  <h3 id="quiz1Message" class="mb-4"></h3>
-  <h3 id="quiz2Message" class="mb-4"></h3>
-  <h3 id="quiz4Message" class="mb-4"></h3>
-  <h3 id="quiz5Message" class="mb-4"></h3>
-</section>
+<div data-controller="quiz-result">
+  <section class="primary claim container my-10 text-center">
+    <h1 class="mb-10 display-6">Vielen Dank für Deine Antworten!</h2>
+    <div data-quiz-result-target="successMessage" class="mb-4" hidden>
+      <p>
+        Herzlichen Glückwunsch, Du erfüllst unsere Anforderungen für eine Teilnahme!
+      </p>
+      <p>
+        Nutze ein kostenloses Erstgespräch, um deine Karriere im Web Development zu beleuchten.
+      </p>
+    </div>
+    <p data-quiz-result-target="questionFailureMessage" data-question-id="quiz-1" class="mb-4" hidden>
+      Grundsätzlich brauchst Du mindestens 6 Monate Berufserfahrung.
+    </p>
+    <p data-quiz-result-target="questionFailureMessage" data-question-id="quiz-2" class="mb-4" hidden>
+      Das Programm bezieht sich inhaltlich auf Full Stack Web Development. Wie es aussieht kommst du aus einem anderen Bereich, bist du sicher, dass du dich im Web Development weiterbilden möchtest?
+    </p>
+    <p data-quiz-result-target="questionFailureMessage" data-question-id="quiz-4" class="mb-4" hidden>
+      Für einen erfolgreichen Abschluss, musst du bereit sein zumindest 1 Stunde täglich aufzuwenden. Es ist nicht vorgesehen das Programm in geblockten Einheiten durchzuführen.
+    </p>
+    <p data-quiz-result-target="questionFailureMessage" data-question-id="quiz-5" class="mb-4" hidden>
+      Das sorgfältig geplante Programm strebt die Zugehörigkeit zu führenden Bildungsinstituten an und soll unseren Absolventen als Referenz dienen. Niedrigere Preise würden unsere Werte von Aktualität und Fachkompetenz gefährden.
+    </p>
+    <p data-quiz-result-target="failureMessage" hidden>
+      Wenn du denkst, dass du trotzdem an unserem Programm teilzunehmen kannst, dann vereinbare ein Gespräch mit uns, und wir klären das ab.
+    </p>
+  </section>
 
-<section class="cta-steps container text-center">
-  <h2 id="correctQuiz2" class="mb-4"></h2>
-  <h2 id="falseQuiz" class="mb-4"></h2>
-  <!-- Calendly Inline-Widget Beginn -->
-  <div
-    id="calendly-embed"
-    class="calendly-inline-widget"
-    style="min-width: 320px; height: 700px"
-  ></div>
-  <!-- Calendly Inline-Widget Ende -->
-  <p class="lead mt-6">Werde einer der besten Senior Developers weltweit!</p>
-</section>
+  <section class="cta-steps container text-center">
+    <!-- Calendly Inline-Widget Beginn -->
+    <div
+      id="calendly-embed"
+      class="calendly-inline-widget"
+      style="min-width: 320px; height: 700px"
+    ></div>
+    <!-- Calendly Inline-Widget Ende -->
+    <p class="lead mt-6">Werde einer der besten Senior Developers weltweit!</p>
+  </section>
+</div>
 
 <!-- Testimonials -->
 <div class="border-top">
