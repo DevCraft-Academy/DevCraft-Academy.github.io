@@ -3,46 +3,54 @@ layout: marketing-funnel-layout
 title: quiz-4
 ---
 
-<div class="container mt-10">
-  <div class="card overflow-hidden">
-    <div class="row g-0">
-      <div class="col-md-6 story-position">
-        <div class="card-body p-4 px-lg-5">
-          <h2 class="text-center">
-            Wie viel Zeit kannst du pro Tag in eine Online Weiterbildung
-            investieren?
-          </h2>
+<form action="./quiz-5.html">
+  <div class="container mt-10">
+    <div class="card overflow-hidden">
+      <div class="row g-0">
+        <div class="col-md-6 story-position">
+          <div class="card-body p-4 px-lg-5">
+            <h2 class="text-center">
+              Wie viel Zeit kannst du pro Tag in eine Online Weiterbildung
+              investieren?
+            </h2>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-6 d-flex flex-column justify-content-center">
-        <form class="d-flex flex-column">
-          {% include quiz/answer.html name="quiz-4" id="up-30-minutes" label="bis 30 Minuten" %}
-          {% include quiz/answer.html name="quiz-4" id="up-60-minutes" label="30-60 Minuten" %}
-          {% include quiz/answer.html name="quiz-4" id="over-60-minutes" label="über 60 Minuten" %}
-        </form>
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+          <div class="d-flex flex-column">
+            {% include quiz/answer.html name="quiz-4" id="up-30-minutes" label="bis 30 Minuten" %}
+            {% include quiz/answer.html name="quiz-4" id="up-60-minutes" label="30-60 Minuten" %}
+            {% include quiz/answer.html name="quiz-4" id="over-60-minutes" label="über 60 Minuten" %}
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-{% include quiz/cta_button.html nextUrl="/quiz-funnel/quiz-5.html" %}
+  {% include quiz/cta_button.html %}
+</form>
 
 <script>
+  const questionId = "quiz-4";
+
   document.addEventListener("DOMContentLoaded", function () {
-    const answerOptions = document.querySelectorAll('input[name="quiz-4"]');
+    const answerOptions = document.querySelectorAll(`input[name="${questionId}"]`);
 
     answerOptions.forEach((option) => {
       option.addEventListener("change", function (event) {
-        const questionId = "quiz-4";
-        const selectedAnswer = event.target.value;
-
-        saveAnswer(questionId, selectedAnswer);
-
         const isChecked = [...answerOptions].some((option) => option.checked);
+        const quizButton = document.querySelector("button[type=submit]");
         quizButton.classList.toggle("disabled", !isChecked);
-        quizButton.disabled = !isChecked;
       });
+    });
+
+    document.querySelector('form').addEventListener("submit", (event) => {
+      const selectedAnswer = document.querySelector(`input[name="${questionId}"]:checked`).value;
+      saveAnswer(questionId, selectedAnswer);
+
+      // Avoid putting the form data in the URL
+      event.preventDefault();
+      window.location.href = event.target.action;
     });
   });
 </script>
