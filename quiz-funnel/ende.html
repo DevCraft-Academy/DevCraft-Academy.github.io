@@ -4,186 +4,280 @@ title: end
 ---
 
 <section class="primary claim container my-10 text-center">
-    <h2 class="mb-10 display-6">
-        Vielen Dank für Deine Antworten!
-    </h2>
-    <h3 id="correctQuiz1" class="mb-4"></h3>
-    <h3 id="quiz1Message" class="mb-4"></h3>
-    <h3 id="quiz2Message" class="mb-4"></h3>
-    <h3 id="quiz4Message" class="mb-4"></h3>
-    <h3 id="quiz5Message" class="mb-4"></h3>
+  <h2 class="mb-10 display-6">Vielen Dank für Deine Antworten!</h2>
+  <h3 id="correctQuiz1" class="mb-4"></h3>
+  <h3 id="quiz1Message" class="mb-4"></h3>
+  <h3 id="quiz2Message" class="mb-4"></h3>
+  <h3 id="quiz4Message" class="mb-4"></h3>
+  <h3 id="quiz5Message" class="mb-4"></h3>
 </section>
 
-
 <section class="cta-steps container text-center">
-    <h2 id="correctQuiz2" class="mb-4"></h2>
-    <h2 id="falseQuiz" class="mb-4"></h2>
-    <!-- Calendly Inline-Widget Beginn -->
-    <div id="calendly-embed" class="calendly-inline-widget" data-url="https://calendly.com/devcraftacademy/erstgesprach" style="min-width:320px;height:700px;"></div>
-    <script function loadUserAnswersFromLocalStorage() {
-      const storedUserAnswers = localStorage.getItem('userAnswers');
-      if (storedUserAnswers) {
-          return JSON.parse(storedUserAnswers);
-      }
-      return {};
-  }
-
-  userAnswers = loadUserAnswersFromLocalStorage();
-  window.onload = function() {
-      showResults();
-  };
-
-  Calendly.initInlineWidget({
-      url: 'https://calendly.com/devcraftacademy/erstgesprach',
-      parentElement: document.getElementById('calendly-embed'),
-      prefill: {
-          userAnswers: {
-              "quiz-1": userAnswers["quiz-1"],
-              "quiz-2": userAnswers["quiz-2"],
-              "quiz-3": userAnswers["quiz-3"],
-              "quiz-4": userAnswers["quiz-4"],
-              "quiz-5": userAnswers["quiz-5"],
-          }
-      },
-      utm: {}
-  }); type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <!-- Calendly Inline-Widget Ende -->
-    <p class="lead mt-6">Werde einer der besten Senior Developers weltweit!</p>
-</section>  
+  <h2 id="correctQuiz2" class="mb-4"></h2>
+  <h2 id="falseQuiz" class="mb-4"></h2>
+  <!-- Calendly Inline-Widget Beginn -->
+  <div
+    id="calendly-embed"
+    class="calendly-inline-widget"
+    style="min-width: 320px; height: 700px"
+  ></div>
+  <!-- Calendly Inline-Widget Ende -->
+  <p class="lead mt-6">Werde einer der besten Senior Developers weltweit!</p>
+</section>
 
 <!-- Testimonials -->
 <div class="border-top">
-    <div class="container content-space-lg-3">
-      <!-- Heading -->
-      <div class="mb-5 mb-md-9 testimonial-headline">
-        <h2 class="text-center pt-6">Was halten unsere Teilnehmer:innen von der DevCraft Academy?</h2>
-      </div>
-      <!-- End Heading -->
-  
-      <div class="row">
-        <div class="col-sm-6 col-lg-4">
-          <!-- Card -->
-          <div class="card shadow-none">
-            <div class="card-body">
-              <!-- Rating -->
-              <div class="d-flex gap-1 mb-2">
-                <img src="../assets/svg/illustrations/star.svg" alt="Review rating" width="16">
-                <img src="../assets/svg/illustrations/star.svg" alt="Review rating" width="16">
-                <img src="../assets/svg/illustrations/star.svg" alt="Review rating" width="16">
-                <img src="../assets/svg/illustrations/star.svg" alt="Review rating" width="16">
-                <img src="../assets/svg/illustrations/star.svg" alt="Review rating" width="16">
-              </div>
-              <!-- End Rating -->
-  
-              <div class="mb-auto">
-                <p class="card-text">"Ich mache die DevCraft Academy um mich persönlich weiterzubilden. Die Inhalte sind sehr gut aufbereitet und verständlich. Das vermittelte Wissen habe ich im Gespräch mit Seniorentwicklern schon oft gebraucht. Jetzt verstehe ich sie viel besser. In der Arbeit hatte ich einige Herausforderungen, die ich durch das Wissen aus der DevCraft, besser und schneller lösen konnte."</p>
-              </div>
-            </div>
-  
-            <div class="card-footer pt-0">
-              <!-- Media -->
-              <div class="d-flex align-items-center">
-                <div class="flex-shrink-0">
-                  <img class="avatar avatar-circle" src="../assets/images/testimonials/michael_schlack.jpg" alt="Image Description">
-                </div>
-                <div class="flex-grow-1 ms-3">
-                  <h5 class="card-title mb-0">Michael Schlack</h5>
-                </div>
-              </div>
-              <!-- End Media -->
-            </div>
-          </div>
-          <!-- End Card -->
-        </div>
-        <!-- End Col -->
-  
-        <div class="col-sm-6 col-lg-4">
-          <!-- Card -->
-          <div class="card bg-primary">
-            <div class="card-body">
-              <!-- Rating -->
-              <div class="d-flex gap-1 mb-2">
-                <img src="../assets/svg/illustrations/star.svg" alt="Review rating" width="16">
-                <img src="../assets/svg/illustrations/star.svg" alt="Review rating" width="16">
-                <img src="../assets/svg/illustrations/star.svg" alt="Review rating" width="16">
-                <img src="../assets/svg/illustrations/star.svg" alt="Review rating" width="16">
-                <img src="../assets/svg/illustrations/star.svg" alt="Review rating" width="16">
-              </div>
-              <!-- End Rating -->
-  
-              <div class="mb-auto">
-                <p class="card-text text-white">"Ich habe die DevCraft Academy angefangen, um die theoretischen Wissenslücken, die ich nach dem Bootcamp noch habe zu schließen. Es geht nicht darum, die neueste Sprache zu lernen, sondern die Methodik und das Mindset eines professionellen Softwareentwicklers anzueignen und zu festigen. Die DevCraft bietet mir sowohl den Leitfaden durch ein fertiges Curriculum als auch Mentoren Support, falls ich Nachfragen zum Stoff habe."</p>
-              </div>
-            </div>
-  
-            <div class="card-footer pt-0">
-              <!-- Media -->
-              <div class="d-flex align-items-center">
-                <div class="flex-shrink-0">
-                  <img class="avatar avatar-circle" src="../assets/images/testimonials/hong_hanh_avatar.jpg" alt="Image Description">
-                </div>
-                <div class="flex-grow-1 ms-3">
-                  <h5 class="card-title text-white mb-0">Hong-Hanh Chu</h5>
-                </div>
-              </div>
-              <!-- End Media -->
-            </div>
-          </div>
-          <!-- End Card -->
-        </div>
-        <!-- End Col -->
-  
-        <div class="col-sm-6 col-lg-4">
-          <!-- Card -->
-          <div class="card shadow-none">
-            <div class="card-body">
-              <!-- Rating -->
-              <div class="d-flex gap-1 mb-2">
-                <img src="../assets/svg/illustrations/star.svg" alt="Review rating" width="16">
-                <img src="../assets/svg/illustrations/star.svg" alt="Review rating" width="16">
-                <img src="../assets/svg/illustrations/star.svg" alt="Review rating" width="16">
-                <img src="../assets/svg/illustrations/star.svg" alt="Review rating" width="16">
-                <img src="../assets/svg/illustrations/star.svg" alt="Review rating" width="16">
-              </div>
-              <!-- End Rating -->
-  
-              <div class="mb-auto">
-                <p class="card-text">"Die DevCraft Academy hilft mir dabei, meine Wissenslücken in der Softwareentwicklung zu schließen und dessen Grundlagen zu festigen. Dabei wird der komplette Techstack angegangen. Mithilfe der Kenntnisse, die ich erlange, entwickle ich viel schneller Senioreigenschaften und gewinne einen Überblick über die essentiellen Themen der Softwareentwicklung. Durch Übungsaufgaben und Projekte wird das Gelernte auch in die Praxis umgesetzt und man hat stetig Ansprechpartner an seiner Seite für Fragen und Anmerkungen."</p>
-              </div>
-            </div>
-  
-            <div class="card-footer pt-0">
-              <!-- Media -->
-              <div class="d-flex align-items-center">
-                <div class="flex-shrink-0">
-                  <img class="avatar avatar-circle" src="../assets/images/testimonials/guel_yasin.jpg" alt="Image Description">
-                </div>
-                <div class="flex-grow-1 ms-3">
-                  <h5 class="card-title mb-0">Yasin Gül</h5>
-                </div>
-              </div>
-              <!-- End Media -->
-            </div>
-          </div>
-          <!-- End Card -->
-        </div>
-        <!-- End Col -->
-      </div>
-      <!-- End Row -->
+  <div class="container content-space-lg-3">
+    <!-- Heading -->
+    <div class="mb-5 mb-md-9 testimonial-headline">
+      <h2 class="text-center pt-6">
+        Was halten unsere Teilnehmer:innen von der DevCraft Academy?
+      </h2>
     </div>
+    <!-- End Heading -->
+
+    <div class="row">
+      <div class="col-sm-6 col-lg-4">
+        <!-- Card -->
+        <div class="card shadow-none">
+          <div class="card-body">
+            <!-- Rating -->
+            <div class="d-flex gap-1 mb-2">
+              <img
+                src="../assets/svg/illustrations/star.svg"
+                alt="Review rating"
+                width="16"
+              />
+              <img
+                src="../assets/svg/illustrations/star.svg"
+                alt="Review rating"
+                width="16"
+              />
+              <img
+                src="../assets/svg/illustrations/star.svg"
+                alt="Review rating"
+                width="16"
+              />
+              <img
+                src="../assets/svg/illustrations/star.svg"
+                alt="Review rating"
+                width="16"
+              />
+              <img
+                src="../assets/svg/illustrations/star.svg"
+                alt="Review rating"
+                width="16"
+              />
+            </div>
+            <!-- End Rating -->
+
+            <div class="mb-auto">
+              <p class="card-text">
+                "Ich mache die DevCraft Academy um mich persönlich
+                weiterzubilden. Die Inhalte sind sehr gut aufbereitet und
+                verständlich. Das vermittelte Wissen habe ich im Gespräch mit
+                Seniorentwicklern schon oft gebraucht. Jetzt verstehe ich sie
+                viel besser. In der Arbeit hatte ich einige Herausforderungen,
+                die ich durch das Wissen aus der DevCraft, besser und schneller
+                lösen konnte."
+              </p>
+            </div>
+          </div>
+
+          <div class="card-footer pt-0">
+            <!-- Media -->
+            <div class="d-flex align-items-center">
+              <div class="flex-shrink-0">
+                <img
+                  class="avatar avatar-circle"
+                  src="../assets/images/testimonials/michael_schlack.jpg"
+                  alt="Image Description"
+                />
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <h5 class="card-title mb-0">Michael Schlack</h5>
+              </div>
+            </div>
+            <!-- End Media -->
+          </div>
+        </div>
+        <!-- End Card -->
+      </div>
+      <!-- End Col -->
+
+      <div class="col-sm-6 col-lg-4">
+        <!-- Card -->
+        <div class="card bg-primary">
+          <div class="card-body">
+            <!-- Rating -->
+            <div class="d-flex gap-1 mb-2">
+              <img
+                src="../assets/svg/illustrations/star.svg"
+                alt="Review rating"
+                width="16"
+              />
+              <img
+                src="../assets/svg/illustrations/star.svg"
+                alt="Review rating"
+                width="16"
+              />
+              <img
+                src="../assets/svg/illustrations/star.svg"
+                alt="Review rating"
+                width="16"
+              />
+              <img
+                src="../assets/svg/illustrations/star.svg"
+                alt="Review rating"
+                width="16"
+              />
+              <img
+                src="../assets/svg/illustrations/star.svg"
+                alt="Review rating"
+                width="16"
+              />
+            </div>
+            <!-- End Rating -->
+
+            <div class="mb-auto">
+              <p class="card-text text-white">
+                "Ich habe die DevCraft Academy angefangen, um die theoretischen
+                Wissenslücken, die ich nach dem Bootcamp noch habe zu schließen.
+                Es geht nicht darum, die neueste Sprache zu lernen, sondern die
+                Methodik und das Mindset eines professionellen
+                Softwareentwicklers anzueignen und zu festigen. Die DevCraft
+                bietet mir sowohl den Leitfaden durch ein fertiges Curriculum
+                als auch Mentoren Support, falls ich Nachfragen zum Stoff habe.""
+              </p>
+            </div>
+          </div>
+
+          <div class="card-footer pt-0">
+            <!-- Media -->
+            <div class="d-flex align-items-center">
+              <div class="flex-shrink-0">
+                <img
+                  class="avatar avatar-circle"
+                  src="../assets/images/testimonials/hong_hanh_avatar.jpg"
+                  alt="Image Description"
+                />
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <h5 class="card-title text-white mb-0">Hong-Hanh Chu</h5>
+              </div>
+            </div>
+            <!-- End Media -->
+          </div>
+        </div>
+        <!-- End Card -->
+      </div>
+      <!-- End Col -->
+
+      <div class="col-sm-6 col-lg-4">
+        <!-- Card -->
+        <div class="card shadow-none">
+          <div class="card-body">
+            <!-- Rating -->
+            <div class="d-flex gap-1 mb-2">
+              <img
+                src="../assets/svg/illustrations/star.svg"
+                alt="Review rating"
+                width="16"
+              />
+              <img
+                src="../assets/svg/illustrations/star.svg"
+                alt="Review rating"
+                width="16"
+              />
+              <img
+                src="../assets/svg/illustrations/star.svg"
+                alt="Review rating"
+                width="16"
+              />
+              <img
+                src="../assets/svg/illustrations/star.svg"
+                alt="Review rating"
+                width="16"
+              />
+              <img
+                src="../assets/svg/illustrations/star.svg"
+                alt="Review rating"
+                width="16"
+              />
+            </div>
+            <!-- End Rating -->
+
+            <div class="mb-auto">
+              <p class="card-text">
+                "Die DevCraft Academy hilft mir dabei, meine Wissenslücken in
+                der Softwareentwicklung zu schließen und dessen Grundlagen zu
+                festigen. Dabei wird der komplette Techstack angegangen.
+                Mithilfe der Kenntnisse, die ich erlange, entwickle ich viel
+                schneller Senioreigenschaften und gewinne einen Überblick über
+                die essentiellen Themen der Softwareentwicklung. Durch
+                Übungsaufgaben und Projekte wird das Gelernte auch in die Praxis
+                umgesetzt und man hat stetig Ansprechpartner an seiner Seite für
+                Fragen und Anmerkungen."
+              </p>
+            </div>
+          </div>
+
+          <div class="card-footer pt-0">
+            <!-- Media -->
+            <div class="d-flex align-items-center">
+              <div class="flex-shrink-0">
+                <img
+                  class="avatar avatar-circle"
+                  src="../assets/images/testimonials/guel_yasin.jpg"
+                  alt="Image Description"
+                />
+              </div>
+              <div class="flex-grow-1 ms-3">
+                <h5 class="card-title mb-0">Yasin Gül</h5>
+              </div>
+            </div>
+            <!-- End Media -->
+          </div>
+        </div>
+        <!-- End Card -->
+      </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Row -->
   </div>
-  <!-- End Testimonials -->
-      
-<script>    function loadUserAnswersFromLocalStorage() {
-    const storedUserAnswers = localStorage.getItem('userAnswers');
+</div>
+<!-- End Testimonials -->
+
+<script
+  type="text/javascript"
+  src="https://assets.calendly.com/assets/external/widget.js"
+></script>
+<script>
+  function loadUserAnswersFromLocalStorage() {
+    const storedUserAnswers = localStorage.getItem("userAnswers");
     if (storedUserAnswers) {
-        return JSON.parse(storedUserAnswers);
+      return JSON.parse(storedUserAnswers);
     }
     return {};
-    }
-  
+  }
+
   userAnswers = loadUserAnswersFromLocalStorage();
-    window.onload = function() {
-        showResults();
-    };
+  window.onload = function () {
+    showResults();
+  };
+
+  Calendly.initInlineWidget({
+    url: "https://calendly.com/devcraftacademy/erstgesprach",
+    parentElement: document.getElementById("calendly-embed"),
+    prefill: {
+      userAnswers: {
+        "quiz-1": userAnswers["quiz-1"],
+        "quiz-2": userAnswers["quiz-2"],
+        "quiz-3": userAnswers["quiz-3"],
+        "quiz-4": userAnswers["quiz-4"],
+        "quiz-5": userAnswers["quiz-5"],
+      },
+    },
+    utm: {},
+  });
 </script>
