@@ -1,6 +1,6 @@
 ---
 layout: marketing-funnel-layout
-title: quiz-2
+title: Frage 2
 ---
 
 <form
@@ -8,29 +8,9 @@ title: quiz-2
   data-controller="quiz-question"
   data-action="submit->quiz-question#submit change->quiz-question#change"
   data-quiz-question-number-value="2"
+  class="mt-10"
 >
-  <div class="container mt-10">
-    <div class="card overflow-hidden">
-      <div class="row g-0">
-        <div class="col-md-6 story-position">
-          <div class="card-body p-4 px-lg-5">
-            <h2 class="text-center">
-              In welchem Bereich des Software Development bist du tätig
-            </h2>
-          </div>
-        </div>
-
-        <div class="col-md-6 d-flex flex-column justify-content-center">
-          <div class="d-flex flex-column">
-            {% include quiz/answer.html id="web-development" label="Web Development" %}
-            {% include quiz/answer.html id="mobile-app" label="Mobile App Development" %}
-            {% include quiz/answer.html id="app-development" label="Applikation Development" %}
-            {% include quiz/answer.html id="other-field" label="Anderes" %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include quiz/question.html question=site.data.quiz_questions.question-2 %}
 
   {% include quiz/cta_button.html %}
 </form>

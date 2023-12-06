@@ -2,7 +2,7 @@ let userAnswers = {};
 const correctAnswers = {
     "quiz-1": ["up-12-month", "over-12-month"],
     "quiz-2": ["web-development"],
-    "quiz-3": ["senior-level", "intermediate-level", "junior-intermedite"],
+    "quiz-3": ["senior", "mid-level", "junior"],
     "quiz-4": ["up-60-minutes", "over-60-minutes"],
     "quiz-5": ["1000-10000", "over-10000"],
 };
@@ -80,6 +80,5 @@ function showResults() {
         falseQuiz.textContent = "Wenn du denkst, dass du trotzdem an unserem Programm teilzunehmen kannst, dann vereinbare ein Gespräch mit uns, und wir klären das ab.";
         correctQuiz1.textContent = "";
         correctQuiz2.textContent = "";
-    } 
+    }
 }
-

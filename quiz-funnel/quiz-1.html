@@ -1,6 +1,6 @@
 ---
 layout: marketing-funnel-layout
-title: quiz-1
+title: Frage 1
 ---
 
 <section class="primary claim container mt-10">
@@ -14,28 +14,7 @@ title: quiz-1
   data-action="submit->quiz-question#submit change->quiz-question#change"
   data-quiz-question-number-value="1"
 >
-  <div class="container">
-    <div class="card overflow-hidden">
-      <div class="row g-0">
-        <div class="col-md-6 story-position">
-          <div class="card-body p-4 px-lg-5">
-            <h2 class="text-center">
-              Wie lange arbeitest du schon als Software Developer?
-            </h2>
-          </div>
-        </div>
-
-        <div class="col-md-6 d-flex flex-column justify-content-center">
-          <div class="d-flex flex-column py-3">
-            {% include quiz/answer.html id="no-job" label="keine Erfahrung" %}
-            {% include quiz/answer.html id="less-6-month" label="weniger als 6 Monate" %}
-            {% include quiz/answer.html id="up-12-month" label="6-12 Monate" %}
-            {% include quiz/answer.html id="over-12-month" label="über 12 Monate" %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include quiz/question.html question=site.data.quiz_questions.question-1 %}
 
   {% include quiz/cta_button.html %}
 </form>

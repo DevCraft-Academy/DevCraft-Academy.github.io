@@ -1,6 +1,6 @@
 ---
 layout: marketing-funnel-layout
-title: quiz-6
+title: Frage 5
 ---
 
 <form
@@ -8,29 +8,9 @@ title: quiz-6
   data-controller="quiz-question"
   data-action="submit->quiz-question#submit change->quiz-question#change"
   data-quiz-question-number-value="5"
+  class="mt-10"
 >
-  <div class="container mt-10">
-    <div class="card overflow-hidden">
-      <div class="row g-0">
-        <div class="col-md-6 story-position">
-          <div class="card-body p-4 px-lg-5">
-            <h2 class="text-center">
-              Was ist dir eine 6 Monate lange Weiterbildung für deinen beruflichen
-              Erfolg wert?
-            </h2>
-          </div>
-        </div>
-
-        <div class="col-md-6 d-flex flex-column justify-content-center">
-          <div class="d-flex flex-column">
-            {% include quiz/answer.html id="less-1000" label="unter 1.000 €" %}
-            {% include quiz/answer.html id="1000-10000" label="1.000 € - 10.000 €" %}
-            {% include quiz/answer.html id="over-10000" label="über 10.000 €" %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include quiz/question.html question=site.data.quiz_questions.question-5 %}
 
   {% include quiz/cta_button.html %}
 </form>

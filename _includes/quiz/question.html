@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="card overflow-hidden">
+    <div class="row g-0">
+      <div class="col-md-6 story-position">
+        <div class="card-body p-4 px-lg-5">
+          <h2 class="text-center">
+            {{ include.question.text }}
+          </h2>
+        </div>
+      </div>
+
+      <div class="col-md-6 d-flex flex-column justify-content-center">
+        <div class="d-flex flex-column py-3">
+          {% for answer in include.question.answers %}
+            {% include quiz/answer.html id=answer.value label=answer.label %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 ---
 layout: marketing-funnel-layout
-title: quiz-3
+title: Frage 3
 ---
 
 <form
@@ -8,29 +8,9 @@ title: quiz-3
   data-controller="quiz-question"
   data-action="submit->quiz-question#submit change->quiz-question#change"
   data-quiz-question-number-value="3"
+  class="mt-10"
 >
-  <div class="container mt-10">
-    <div class="card overflow-hidden">
-      <div class="row g-0">
-        <div class="col-md-6 story-position">
-          <div class="card-body p-4 px-lg-5">
-            <h2 class="text-center">
-              Auf welchem Level siehst du dich im Software Development in einem
-              Jahr?
-            </h2>
-          </div>
-        </div>
-
-        <div class="col-md-6 d-flex flex-column justify-content-center">
-          <div class="d-flex flex-column">
-            {% include quiz/answer.html id="senior-level" label="Senior Level" %}
-            {% include quiz/answer.html id="intermediate-level" label="Intermediate Level" %}
-            {% include quiz/answer.html id="junior-level" label="Junior Level" %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  {% include quiz/question.html question=site.data.quiz_questions.question-3 %}
 
   {% include quiz/cta_button.html %}
 </form>

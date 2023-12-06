@@ -1,0 +1,54 @@
+---
+question-1:
+  text: Wie lange arbeitest du schon als Software Developer?
+  answers:
+    - label: noch gar nicht
+      value: no-job
+    - label: weniger als 6 Monate
+      value: less-6-month
+    - label: 6-12 Monate
+      value: up-12-month
+    - label: über 12 Monate
+      value: over-12-month
+
+question-2:
+  text: In welchem Bereich des Software Development bist du tätig
+  answers:
+    - label: Web Development
+      value: web-development
+    - label: Mobile App Development
+      value: mobile-app
+    - label: Applikation Development
+      value: app-development
+    - label: Anderes
+      value: other-field
+
+question-3:
+  text: Auf welchem Level siehst du dich im Software Development in einem Jahr?
+  answers:
+    - label: Senior Developer
+      value: senior
+    - label: Mid-Level Developer
+      value: mid-level
+    - label: Junior Developer
+      value: junior
+
+question-4:
+  text: Wie viel Zeit kannst du pro Tag in eine Online Weiterbildung investieren?
+  answers:
+    - label: bis 30 Minuten
+      value: up-30-minutes
+    - label: 30-60 Minuten
+      value: up-60-minutes
+    - label: über 60 Minuten
+      value: over-60-minutes
+
+question-5:
+  text: Was ist dir eine 6 Monate lange Weiterbildung für deinen beruflichen Erfolg wert?
+  answers:
+    - label: unter 1.000 €
+      value: less-1000
+    - label: 1.000 € - 10.000 €
+      value: 1000-10000
+    - label: über 10.000 €
+      value: over-10000
