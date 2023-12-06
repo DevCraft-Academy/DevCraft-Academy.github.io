@@ -17,47 +17,9 @@ title: quiz-3
 
       <div class="col-md-6 d-flex flex-column justify-content-center">
         <form class="d-flex flex-column">
-          <input
-            type="radio"
-            class="btn-check"
-            name="quiz-3"
-            id="senior-level"
-            value="senior-level"
-            autocomplete="off"
-          />
-          <label
-            class="btn btn-outline-primary mx-2 mt-4 my-2"
-            for="senior-level"
-            >Senior Level</label
-          >
-
-          <input
-            type="radio"
-            class="btn-check"
-            name="quiz-3"
-            id="intermediate-level"
-            value="intermediate-level"
-            autocomplete="off"
-          />
-          <label
-            class="btn btn-outline-primary mx-2 my-2"
-            for="intermediate-level"
-            >Intermediate Level</label
-          >
-
-          <input
-            type="radio"
-            class="btn-check"
-            name="quiz-3"
-            id="junior-intermedite"
-            value="junior-intermedite"
-            autocomplete="off"
-          />
-          <label
-            class="btn btn-outline-primary mx-2 mt-2 mb-4"
-            for="junior-intermedite"
-            >Junior Intermediate Level</label
-          >
+          {% include quiz/answer.html name="quiz-3" id="senior-level" label="Senior Level" %}
+          {% include quiz/answer.html name="quiz-3" id="intermediate-level" label="Intermediate Level" %}
+          {% include quiz/answer.html name="quiz-3" id="junior-level" label="Junior Level" %}
         </form>
       </div>
     </div>

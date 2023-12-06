@@ -19,56 +19,11 @@ title: quiz-1
       </div>
 
       <div class="col-md-6 d-flex flex-column justify-content-center">
-        <form class="d-flex flex-column">
-          <input
-            type="radio"
-            class="btn-check"
-            name="quiz-1"
-            id="no-job"
-            value="no-job"
-            autocomplete="off"
-          />
-          <label class="btn btn-outline-primary mx-2 mt-4 mb-2" for="no-job"
-            >keine Erfahrung</label
-          >
-
-          <input
-            type="radio"
-            class="btn-check"
-            name="quiz-1"
-            id="less-6-month"
-            value="less-6-month"
-            autocomplete="off"
-          />
-          <label class="btn btn-outline-primary mx-2 my-2" for="less-6-month"
-            >weniger als 6 Monate</label
-          >
-
-          <input
-            type="radio"
-            class="btn-check"
-            name="quiz-1"
-            id="up-12-month"
-            value="up-12-month"
-            autocomplete="off"
-          />
-          <label class="btn btn-outline-primary mx-2 my-2" for="up-12-month"
-            >6-12 Monate</label
-          >
-
-          <input
-            type="radio"
-            class="btn-check"
-            name="quiz-1"
-            id="over-12-month"
-            value="over-12-month"
-            autocomplete="off"
-          />
-          <label
-            class="btn btn-outline-primary mx-2 mt-2 mb-4"
-            for="over-12-month"
-            >über 12 Monate</label
-          >
+        <form class="d-flex flex-column py-3">
+          {% include quiz/answer.html name="quiz-1" id="no-job" label="keine Erfahrung" %}
+          {% include quiz/answer.html name="quiz-1" id="less-6-month" label="weniger als 6 Monate" %}
+          {% include quiz/answer.html name="quiz-1" id="up-12-month" label="6-12 Monate" %}
+          {% include quiz/answer.html name="quiz-1" id="over-12-month" label="über 12 Monate" %}
         </form>
       </div>
     </div>

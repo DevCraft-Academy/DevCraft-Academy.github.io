@@ -17,46 +17,9 @@ title: quiz-4
 
       <div class="col-md-6 d-flex flex-column justify-content-center">
         <form class="d-flex flex-column">
-          <input
-            type="radio"
-            class="btn-check"
-            name="quiz-4"
-            id="up-30-minutes"
-            value="up-30-minutes"
-            autocomplete="off"
-          />
-          <label
-            class="btn btn-outline-primary mx-2 mt-4 my-2"
-            for="up-30-minutes"
-          >
-            bis 30 Minuten</label
-          >
-
-          <input
-            type="radio"
-            class="btn-check"
-            name="quiz-4"
-            id="up-60-minutes"
-            value="up-60-minutes"
-            autocomplete="off"
-          />
-          <label class="btn btn-outline-primary mx-2 my-2" for="up-60-minutes"
-            >30-60 Minuten</label
-          >
-
-          <input
-            type="radio"
-            class="btn-check"
-            name="quiz-4"
-            id="over-60-minutes"
-            value="over-60-minutes"
-            autocomplete="off"
-          />
-          <label
-            class="btn btn-outline-primary mx-2 mt-2 mb-4"
-            for="over-60-minutes"
-            >über 60 Minuten</label
-          >
+          {% include quiz/answer.html name="quiz-4" id="up-30-minutes" label="bis 30 Minuten" %}
+          {% include quiz/answer.html name="quiz-4" id="up-60-minutes" label="30-60 Minuten" %}
+          {% include quiz/answer.html name="quiz-4" id="over-60-minutes" label="über 60 Minuten" %}
         </form>
       </div>
     </div>

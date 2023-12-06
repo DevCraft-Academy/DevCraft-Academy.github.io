@@ -16,57 +16,10 @@ title: quiz-2
 
       <div class="col-md-6 d-flex flex-column justify-content-center">
         <form class="d-flex flex-column">
-          <input
-            type="radio"
-            class="btn-check"
-            name="quiz-2"
-            id="web-development"
-            value="web-development"
-            autocomplete="off"
-          />
-          <label
-            class="btn btn-outline-primary mx-2 mt-4 my-2"
-            for="web-development"
-            >Web Development</label
-          >
-
-          <input
-            type="radio"
-            class="btn-check"
-            name="quiz-2"
-            id="mobile-app"
-            value="mobile-app"
-            autocomplete="off"
-          />
-          <label class="btn btn-outline-primary mx-2 my-2" for="mobile-app"
-            >Mobile App Development</label
-          >
-
-          <input
-            type="radio"
-            class="btn-check"
-            name="quiz-2"
-            id="app-development"
-            value="app-development"
-            autocomplete="off"
-          />
-          <label class="btn btn-outline-primary mx-2 my-2" for="app-development"
-            >Applikation Development</label
-          >
-
-          <input
-            type="radio"
-            class="btn-check"
-            name="quiz-2"
-            id="other-field"
-            value="other-field"
-            autocomplete="off"
-          />
-          <label
-            class="btn btn-outline-primary mx-2 mt-2 mb-4"
-            for="other-field"
-            >Anderes</label
-          >
+          {% include quiz/answer.html name="quiz-2" id="web-development" label="Web Development" %}
+          {% include quiz/answer.html name="quiz-2" id="mobile-app" label="Mobile App Development" %}
+          {% include quiz/answer.html name="quiz-2" id="app-development" label="Applikation Development" %}
+          {% include quiz/answer.html name="quiz-2" id="other-field" label="Anderes" %}
         </form>
       </div>
     </div>
