@@ -45,11 +45,11 @@
 .gab {
     gap: $spacer;
   }
-  
+
 .continue-button {
     color: white;
     text-decoration-line: none;
-  
+
     &:hover {
       color: $yellow;
     }
@@ -58,16 +58,10 @@
 .button-link {
     color: white;
     text-decoration: none;
-  
+
     &:hover {
       color: $yellow;
     }
-  }
-
-  a.disabled {
-    pointer-events: none;
-    background-color: #006e89;
-    color: #fff;
   }
 
 .story-position {
@@ -113,4 +107,3 @@
   border: none;
   overflow: hidden;
 }
-  

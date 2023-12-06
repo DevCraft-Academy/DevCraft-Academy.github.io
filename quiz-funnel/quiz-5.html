@@ -3,7 +3,12 @@ layout: marketing-funnel-layout
 title: quiz-6
 ---
 
-<form action="./ende.html">
+<form
+  action="./ende.html"
+  data-controller="quiz-question"
+  data-action="submit->quiz-question#submit change->quiz-question#change"
+  data-quiz-question-number-value="5"
+>
   <div class="container mt-10">
     <div class="card overflow-hidden">
       <div class="row g-0">
@@ -18,9 +23,9 @@ title: quiz-6
 
         <div class="col-md-6 d-flex flex-column justify-content-center">
           <div class="d-flex flex-column">
-            {% include quiz/answer.html name="quiz-5" id="less-1000" label="unter 1.000 €" %}
-            {% include quiz/answer.html name="quiz-5" id="1000-10000" label="1.000 € - 10.000 €" %}
-            {% include quiz/answer.html name="quiz-5" id="over-10000" label="über 10.000 €" %}
+            {% include quiz/answer.html id="less-1000" label="unter 1.000 €" %}
+            {% include quiz/answer.html id="1000-10000" label="1.000 € - 10.000 €" %}
+            {% include quiz/answer.html id="over-10000" label="über 10.000 €" %}
           </div>
         </div>
       </div>
@@ -29,28 +34,3 @@ title: quiz-6
 
   {% include quiz/cta_button.html %}
 </form>
-
-<script>
-  const questionId = "quiz-5";
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const answerOptions = document.querySelectorAll(`input[name="${questionId}"]`);
-
-    answerOptions.forEach((option) => {
-      option.addEventListener("change", function (event) {
-        const isChecked = [...answerOptions].some((option) => option.checked);
-        const quizButton = document.querySelector("button[type=submit]");
-        quizButton.classList.toggle("disabled", !isChecked);
-      });
-    });
-
-    document.querySelector('form').addEventListener("submit", (event) => {
-      const selectedAnswer = document.querySelector(`input[name="${questionId}"]:checked`).value;
-      saveAnswer(questionId, selectedAnswer);
-
-      // Avoid putting the form data in the URL
-      event.preventDefault();
-      window.location.href = event.target.action;
-    });
-  });
-</script>

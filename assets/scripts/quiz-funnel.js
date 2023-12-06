@@ -7,20 +7,6 @@ const correctAnswers = {
     "quiz-5": ["1000-10000", "over-10000"],
 };
 
-function saveAnswer(questionId, answer) {
-    let storedUserAnswers = localStorage.getItem('userAnswers');
-
-    if (!storedUserAnswers) {
-        storedUserAnswers = {};
-    } else {
-        storedUserAnswers = JSON.parse(storedUserAnswers);
-    }
-
-    storedUserAnswers[questionId] = answer;
-
-    localStorage.setItem('userAnswers', JSON.stringify(storedUserAnswers));
-}
-
 function checkAnswers() {
     let correctCount = 0;
 

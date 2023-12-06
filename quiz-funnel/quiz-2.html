@@ -3,7 +3,12 @@ layout: marketing-funnel-layout
 title: quiz-2
 ---
 
-<form action="./quiz-3.html">
+<form
+  action="./quiz-3.html"
+  data-controller="quiz-question"
+  data-action="submit->quiz-question#submit change->quiz-question#change"
+  data-quiz-question-number-value="2"
+>
   <div class="container mt-10">
     <div class="card overflow-hidden">
       <div class="row g-0">
@@ -17,10 +22,10 @@ title: quiz-2
 
         <div class="col-md-6 d-flex flex-column justify-content-center">
           <div class="d-flex flex-column">
-            {% include quiz/answer.html name="quiz-2" id="web-development" label="Web Development" %}
-            {% include quiz/answer.html name="quiz-2" id="mobile-app" label="Mobile App Development" %}
-            {% include quiz/answer.html name="quiz-2" id="app-development" label="Applikation Development" %}
-            {% include quiz/answer.html name="quiz-2" id="other-field" label="Anderes" %}
+            {% include quiz/answer.html id="web-development" label="Web Development" %}
+            {% include quiz/answer.html id="mobile-app" label="Mobile App Development" %}
+            {% include quiz/answer.html id="app-development" label="Applikation Development" %}
+            {% include quiz/answer.html id="other-field" label="Anderes" %}
           </div>
         </div>
       </div>
@@ -29,28 +34,3 @@ title: quiz-2
 
   {% include quiz/cta_button.html %}
 </form>
-
-<script>
-  const questionId = "quiz-2";
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const answerOptions = document.querySelectorAll(`input[name="${questionId}"]`);
-
-    answerOptions.forEach((option) => {
-      option.addEventListener("change", function (event) {
-        const isChecked = [...answerOptions].some((option) => option.checked);
-        const quizButton = document.querySelector("button[type=submit]");
-        quizButton.classList.toggle("disabled", !isChecked);
-      });
-    });
-
-    document.querySelector('form').addEventListener("submit", (event) => {
-      const selectedAnswer = document.querySelector(`input[name="${questionId}"]:checked`).value;
-      saveAnswer(questionId, selectedAnswer);
-
-      // Avoid putting the form data in the URL
-      event.preventDefault();
-      window.location.href = event.target.action;
-    });
-  });
-</script>
