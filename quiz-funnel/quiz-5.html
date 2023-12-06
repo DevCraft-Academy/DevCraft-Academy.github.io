@@ -14,13 +14,13 @@ title: quiz-6
 
         <div class="col-md-6 d-flex flex-column justify-content-center">
             <form class="d-flex flex-column">
-    
+
                 <input type="radio" class="btn-check" name="quiz-5" id="less-1000" value="less-1000" autocomplete="off">
                 <label class="btn btn-outline-primary mx-2 mt-4 my-2" for="less-1000">unter 1000€</label>
-    
+
                 <input type="radio" class="btn-check" name="quiz-5" id="1000-10000" value="1000-10000" autocomplete="off">
                 <label class="btn btn-outline-primary mx-2 my-2" for="1000-10000">1000€ - 10.000€</label>
-    
+
                 <input type="radio" class="btn-check" name="quiz-5" id="over-10000" value="over-10000" autocomplete="off">
                 <label class="btn btn-outline-primary mx-2 mt-2 mb-4" for="over-10000">über 10.000€</label>
 
@@ -37,7 +37,7 @@ title: quiz-6
       <div class="card-body">
         <div class="row justify-content-md-center align-items-md-center text-center text-md-start">
           <div class="col-md-auto">
-            <a class="btn btn-primary btn-transition button-link disabled" id="quiz5Button" href="/quiz-funnel/ende">Weiter</a>
+            <a class="btn btn-primary btn-transition button-link disabled" id="quiz5Button" href="/quiz-funnel/ende.html">Weiter</a>
           </div>
         </div>
 
@@ -63,12 +63,12 @@ title: quiz-6
 
 <script>    document.addEventListener('DOMContentLoaded', function() {
   const answerOptions = document.querySelectorAll('input[name="quiz-5"]');
-  
+
   answerOptions.forEach(option => {
       option.addEventListener('change', function(event) {
           const questionId = 'quiz-5';
           const selectedAnswer = event.target.value;
-          
+
           saveAnswer(questionId, selectedAnswer);
 
           const isChecked = [...answerOptions].some(option => option.checked);

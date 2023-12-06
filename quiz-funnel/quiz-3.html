@@ -4,30 +4,64 @@ title: quiz-3
 ---
 
 <div class="container mt-10">
-    <div class="card overflow-hidden">
-      <div class="row g-0">
-        <div class="col-md-6 story-position">
-          <div class="card-body p-4 px-lg-5">
-            <h2 class="text-center">Auf welchem Level siehst du dich im Software Development in einem Jahr?</h2>
-          </div>
-        </div>
-
-        <div class="col-md-6 d-flex flex-column justify-content-center">
-            <form class="d-flex flex-column">
-    
-                <input type="radio" class="btn-check" name="quiz-3" id="senior-level" value="senior-level" autocomplete="off">
-                <label class="btn btn-outline-primary mx-2 mt-4 my-2" for="senior-level">Senior Level</label>
-    
-                <input type="radio" class="btn-check" name="quiz-3" id="intermediate-level" value="intermediate-level" autocomplete="off">
-                <label class="btn btn-outline-primary mx-2 my-2" for="intermediate-level">Intermediate Level</label>
-    
-                <input type="radio" class="btn-check" name="quiz-3" id="junior-intermedite" value="junior-intermedite" autocomplete="off">
-                <label class="btn btn-outline-primary mx-2 mt-2 mb-4" for="junior-intermedite">Junior Intermediate Level</label>
-
-            </form>
+  <div class="card overflow-hidden">
+    <div class="row g-0">
+      <div class="col-md-6 story-position">
+        <div class="card-body p-4 px-lg-5">
+          <h2 class="text-center">
+            Auf welchem Level siehst du dich im Software Development in einem
+            Jahr?
+          </h2>
         </div>
       </div>
+
+      <div class="col-md-6 d-flex flex-column justify-content-center">
+        <form class="d-flex flex-column">
+          <input
+            type="radio"
+            class="btn-check"
+            name="quiz-3"
+            id="senior-level"
+            value="senior-level"
+            autocomplete="off"
+          />
+          <label
+            class="btn btn-outline-primary mx-2 mt-4 my-2"
+            for="senior-level"
+            >Senior Level</label
+          >
+
+          <input
+            type="radio"
+            class="btn-check"
+            name="quiz-3"
+            id="intermediate-level"
+            value="intermediate-level"
+            autocomplete="off"
+          />
+          <label
+            class="btn btn-outline-primary mx-2 my-2"
+            for="intermediate-level"
+            >Intermediate Level</label
+          >
+
+          <input
+            type="radio"
+            class="btn-check"
+            name="quiz-3"
+            id="junior-intermedite"
+            value="junior-intermedite"
+            autocomplete="off"
+          />
+          <label
+            class="btn btn-outline-primary mx-2 mt-2 mb-4"
+            for="junior-intermedite"
+            >Junior Intermediate Level</label
+          >
+        </form>
+      </div>
     </div>
+  </div>
 </div>
 <!-- CTA -->
 <div class="container mt-4">
@@ -35,20 +69,46 @@ title: quiz-3
     <div class="card card-sm overflow-hidden">
       <!-- Card -->
       <div class="card-body">
-        <div class="row justify-content-md-center align-items-md-center text-center text-md-start">
+        <div
+          class="row justify-content-md-center align-items-md-center text-center text-md-start"
+        >
           <div class="col-md-auto">
-            <a class="btn btn-primary btn-transition button-link disabled" id="quiz3Button" href="/quiz-funnel/quiz-4">Weiter</a>
+            <a
+              class="btn btn-primary btn-transition button-link disabled"
+              id="quiz3Button"
+              href="/quiz-funnel/quiz-4.html"
+              >Weiter</a
+            >
           </div>
         </div>
 
         <!-- SVG Shape -->
-        <figure class="w-25 d-none d-md-block position-absolute top-0 start-0 mt-n2">
-          <svg viewBox="0 0 451 902" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path opacity="0.125" d="M0 82C203.8 82 369 247.2 369 451C369 654.8 203.8 820 0 820" stroke="url(#paint2_linear)" stroke-width="164" stroke-miterlimit="10"/>
+        <figure
+          class="w-25 d-none d-md-block position-absolute top-0 start-0 mt-n2"
+        >
+          <svg
+            viewBox="0 0 451 902"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              opacity="0.125"
+              d="M0 82C203.8 82 369 247.2 369 451C369 654.8 203.8 820 0 820"
+              stroke="url(#paint2_linear)"
+              stroke-width="164"
+              stroke-miterlimit="10"
+            />
             <defs>
-              <linearGradient id="paint2_linear" x1="323.205" y1="785.242" x2="-97.6164" y2="56.3589" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="white" stop-opacity="0"/>
-                <stop offset="1" stop-color="#377dff"/>
+              <linearGradient
+                id="paint2_linear"
+                x1="323.205"
+                y1="785.242"
+                x2="-97.6164"
+                y2="56.3589"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0" stop-color="white" stop-opacity="0" />
+                <stop offset="1" stop-color="#377dff" />
               </linearGradient>
             </defs>
           </svg>
@@ -61,18 +121,20 @@ title: quiz-3
 </div>
 <!-- End CTA -->
 
-<script>    document.addEventListener('DOMContentLoaded', function() {
-  const answerOptions = document.querySelectorAll('input[name="quiz-3"]');
-  
-  answerOptions.forEach(option => {
-      option.addEventListener('change', function(event) {
-          const questionId = 'quiz-3';
-          const selectedAnswer = event.target.value;
-          
-          saveAnswer(questionId, selectedAnswer);
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const answerOptions = document.querySelectorAll('input[name="quiz-3"]');
 
-          const isChecked = [...answerOptions].some(option => option.checked);
-          quiz3Button.classList.toggle('disabled', !isChecked);
+    answerOptions.forEach((option) => {
+      option.addEventListener("change", function (event) {
+        const questionId = "quiz-3";
+        const selectedAnswer = event.target.value;
+
+        saveAnswer(questionId, selectedAnswer);
+
+        const isChecked = [...answerOptions].some((option) => option.checked);
+        quiz3Button.classList.toggle("disabled", !isChecked);
       });
+    });
   });
-  });</script>
+</script>
