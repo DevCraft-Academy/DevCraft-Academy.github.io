@@ -30,13 +30,4 @@
   @include media-breakpoint-up("xl") {
     height: 1320px;
   }
-
-  body {
-    overflow: hidden;
-  }
-}
-
-.calendly-inline-widget iframe {
-  border: none;
-  overflow: hidden;
 }
