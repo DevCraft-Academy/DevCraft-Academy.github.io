@@ -8,14 +8,17 @@ question-1:
       value: less-6-month
     - label: 6-12 Monate
       value: up-12-month
+      correct: yes
     - label: über 12 Monate
       value: over-12-month
+      correct: yes
 
 question-2:
-  text: In welchem Bereich des Software Development bist du tätig
+  text: In welchem Bereich der Software-Entwicklung bist du tätig?
   answers:
     - label: Web Development
       value: web-development
+      correct: yes
     - label: Mobile App Development
       value: mobile-app
     - label: Applikation Development
@@ -24,17 +27,20 @@ question-2:
       value: other-field
 
 question-3:
-  text: Auf welchem Level siehst du dich im Software Development in einem Jahr?
+  text: Auf welchem Level siehst du dich in einem Jahr?
   answers:
     - label: Senior Developer
       value: senior
+      correct: yes
     - label: Mid-Level Developer
       value: mid-level
+      correct: yes
     - label: Junior Developer
       value: junior
+      correct: yes
 
 question-4:
-  text: Wie viel Zeit kannst du pro Tag in eine Online Weiterbildung investieren?
+  text: Wie viel Zeit kannst du pro Tag in deine Weiterentwicklung investieren?
   answers:
     - label: bis 30 Minuten
       value: up-30-minutes
@@ -42,13 +48,16 @@ question-4:
       value: up-60-minutes
     - label: über 60 Minuten
       value: over-60-minutes
+      correct: yes
 
 question-5:
-  text: Was ist dir eine 6 Monate lange Weiterbildung für deinen beruflichen Erfolg wert?
+  text: Was ist dir deine Weiterentwicklung zum Senior wert?
   answers:
     - label: unter 1.000 €
       value: less-1000
     - label: 1.000 € - 10.000 €
       value: 1000-10000
+      correct: yes
     - label: über 10.000 €
       value: over-10000
+      correct: yes

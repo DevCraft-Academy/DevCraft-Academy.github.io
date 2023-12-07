@@ -1,6 +1,7 @@
 import {
   Controller,
 } from "https://unpkg.com/@hotwired/stimulus/dist/stimulus.js";
+import { storeAnswer } from "../lib/quiz_store.js";
 
 export default class extends Controller {
   static targets = ["submitButton"];
@@ -24,11 +25,6 @@ export default class extends Controller {
   }
 
   saveAnswer() {
-    const storedUserAnswers = localStorage.getItem("userAnswers");
-    const answers = JSON.parse(storedUserAnswers || "{}");
-
-    answers[`quiz-${this.numberValue}`] = this.currentAnswer;
-
-    localStorage.setItem("userAnswers", JSON.stringify(answers));
+    storeAnswer(`question-${this.numberValue}`, this.currentAnswer);
   }
 }
