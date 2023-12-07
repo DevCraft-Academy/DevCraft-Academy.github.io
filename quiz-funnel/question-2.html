@@ -1,16 +1,16 @@
 ---
 layout: marketing-funnel-layout
-title: Frage 3
+title: Frage 2
 ---
 
 <form
-  action="./quiz-4.html"
+  action="./question-3.html"
   data-controller="quiz-question"
   data-action="submit->quiz-question#submit change->quiz-question#change"
-  data-quiz-question-number-value="3"
+  data-quiz-question-number-value="2"
   class="mt-10"
 >
-  {% include quiz/question.html question=site.data.quiz_questions.question-3 %}
+  {% include quiz/question.html question=site.data.quiz_questions.question-2 %}
 
   {% include quiz/cta_button.html %}
 </form>
