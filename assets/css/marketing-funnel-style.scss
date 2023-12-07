@@ -21,7 +21,15 @@
 .calendly-inline-widget {
   overflow: hidden;
   min-width: 320px;
-  height: 700px;
+  height: 1720px;
+
+  @include media-breakpoint-up("md") {
+    height: 1830px;
+  }
+
+  @include media-breakpoint-up("xl") {
+    height: 1320px;
+  }
 
   body {
     overflow: hidden;
