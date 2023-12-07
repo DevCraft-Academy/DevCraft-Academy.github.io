@@ -1,9 +1,10 @@
 ---
 ---
 const quizQuestions = {{ site.data.quiz_questions | jsonify }};
+const storageKey = "quizAnswers";
 
 function readAnswers() {
-  const storedUserAnswers = localStorage.getItem("userAnswers");
+  const storedUserAnswers = localStorage.getItem(storageKey);
   return JSON.parse(storedUserAnswers || "{}");
 }
 
@@ -33,7 +34,7 @@ export const areAllCorrect = () => wrongQuestionIds.length === 0;
 export function storeAnswer(questionKey, answer) {
   answers[questionKey] = answer;
   wrongQuestionIds = calculateWrongQuestionIds();
-  localStorage.setItem("userAnswers", JSON.stringify(answers));
+  localStorage.setItem(storageKey, JSON.stringify(answers));
 }
 
 export function answerLabel(questionId) {
