@@ -1,78 +1,16 @@
 ---
 layout: marketing-funnel-layout
-title: quiz-6
+title: Frage 5
 ---
 
-<div class="container mt-10">
-    <div class="card overflow-hidden">
-      <div class="row g-0">
-        <div class="col-md-6 story-position">
-          <div class="card-body p-4 px-lg-5">
-            <h2 class="text-center">Was ist dir eine 6 Monate lange Weiterbildung für deinen beruflichen Erfolg wert?</h2>
-          </div>
-        </div>
+<form
+  action="./ende.html"
+  data-controller="quiz-question"
+  data-action="submit->quiz-question#submit change->quiz-question#change"
+  data-quiz-question-number-value="5"
+  class="mt-10"
+>
+  {% include quiz/question.html question=site.data.quiz_questions.question-5 %}
 
-        <div class="col-md-6 d-flex flex-column justify-content-center">
-            <form class="d-flex flex-column">
-
-                <input type="radio" class="btn-check" name="quiz-5" id="less-1000" value="less-1000" autocomplete="off">
-                <label class="btn btn-outline-primary mx-2 mt-4 my-2" for="less-1000">unter 1000€</label>
-
-                <input type="radio" class="btn-check" name="quiz-5" id="1000-10000" value="1000-10000" autocomplete="off">
-                <label class="btn btn-outline-primary mx-2 my-2" for="1000-10000">1000€ - 10.000€</label>
-
-                <input type="radio" class="btn-check" name="quiz-5" id="over-10000" value="over-10000" autocomplete="off">
-                <label class="btn btn-outline-primary mx-2 mt-2 mb-4" for="over-10000">über 10.000€</label>
-
-            </form>
-        </div>
-      </div>
-    </div>
-</div>
-<!-- CTA -->
-<div class="container mt-4">
-  <div class="w-lg-75 mx-lg-auto">
-    <div class="card card-sm overflow-hidden">
-      <!-- Card -->
-      <div class="card-body">
-        <div class="row justify-content-md-center align-items-md-center text-center text-md-start">
-          <div class="col-md-auto">
-            <a class="btn btn-primary btn-transition button-link disabled" id="quiz5Button" href="/quiz-funnel/ende.html">Weiter</a>
-          </div>
-        </div>
-
-        <!-- SVG Shape -->
-        <figure class="w-25 d-none d-md-block position-absolute top-0 start-0 mt-n2">
-          <svg viewBox="0 0 451 902" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path opacity="0.125" d="M0 82C203.8 82 369 247.2 369 451C369 654.8 203.8 820 0 820" stroke="url(#paint2_linear)" stroke-width="164" stroke-miterlimit="10"/>
-            <defs>
-              <linearGradient id="paint2_linear" x1="323.205" y1="785.242" x2="-97.6164" y2="56.3589" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="white" stop-opacity="0"/>
-                <stop offset="1" stop-color="#377dff"/>
-              </linearGradient>
-            </defs>
-          </svg>
-        </figure>
-        <!-- End SVG Shape -->
-      </div>
-      <!-- End Card -->
-    </div>
-  </div>
-</div>
-<!-- End CTA -->
-
-<script>    document.addEventListener('DOMContentLoaded', function() {
-  const answerOptions = document.querySelectorAll('input[name="quiz-5"]');
-
-  answerOptions.forEach(option => {
-      option.addEventListener('change', function(event) {
-          const questionId = 'quiz-5';
-          const selectedAnswer = event.target.value;
-
-          saveAnswer(questionId, selectedAnswer);
-
-          const isChecked = [...answerOptions].some(option => option.checked);
-          quiz5Button.classList.toggle('disabled', !isChecked);
-      });
-  });
-  });</script>
+  {% include quiz/cta_button.html %}
+</form>

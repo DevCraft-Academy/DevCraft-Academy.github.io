@@ -3,33 +3,55 @@ layout: marketing-funnel-layout
 title: end
 ---
 
-<section class="primary claim container my-10 text-center">
-  <h2 class="mb-10 display-6">Vielen Dank für Deine Antworten!</h2>
-  <h3 id="correctQuiz1" class="mb-4"></h3>
-  <h3 id="quiz1Message" class="mb-4"></h3>
-  <h3 id="quiz2Message" class="mb-4"></h3>
-  <h3 id="quiz4Message" class="mb-4"></h3>
-  <h3 id="quiz5Message" class="mb-4"></h3>
-</section>
+<div data-controller="quiz-result">
+  <section class="primary claim container mt-10 text-center d-flex flex-column align-items-center" style="max-width: 45rem;">
+    <h1 class="mb-10">Spitze, vielen Dank fürs Mitmachen!</h2>
+    <div data-quiz-result-target="successMessage" class="mb-4" hidden>
+      <p>
+        Glückwunsch! Laut deinen Antworten <strong>erfüllst du die Voraussetzungen</strong> für die DevCraft&nbsp;Academy!
+      </p>
+      <p>
+        Such dir bitte einen Termin für dein kostenloses Beratungsgespräch aus, in dem wir dir herausarbeiten, wie <strong>dein persönlicher Weg zum Senior</strong> aussehen kann:
+      </p>
+    </div>
+    <div data-quiz-result-target="failureMessage" hidden>
+      <p>Laut deinen Antworten bist du für die DevCraft Academy nicht optimal geeignet:</p>
+      <ul class="text-start">
+        <li data-quiz-result-target="questionFailureMessage" data-question-id="quiz-1" class="mb-4" hidden>
+          Für die DevCraft Academy benötigst du <strong>mindestens 6 Monate Berufserfahrung</strong>.
+        </li>
+        <li data-quiz-result-target="questionFailureMessage" data-question-id="quiz-2" class="mb-4" hidden>
+          Die DevCraft Academy richtet sich an <strong>Web Developer (Frontend & Backend)</strong>. Wenn du dich auf andere Bereiche spezialisieren möchtest, können wir dir leider nicht weiterhelfen.
+        </li>
+        <li data-quiz-result-target="questionFailureMessage" data-question-id="quiz-4" class="mb-4" hidden>
+          Du solltest <strong>mindestens eine Stunde täglich</strong> in die DevCraft Academy investieren, dann siehst du deine Fortschritte schon nach wenigen Tagen.
+        </li>
+        <li data-quiz-result-target="questionFailureMessage" data-question-id="quiz-5" class="mb-4" hidden>
+          Wir bieten dir <strong>umfassende Unterstützung</strong> und investieren viel Zeit in deine persönliche Entwicklung zum Senior. Für unter 1.000 € können wir dir deshalb kein 6-monatiges Programm anbieten.
+        </li>
+      </ul>
+      <p>
+        Wenn du denkst, dass du trotzdem an der DevCraft Academy teinehmen solltest, dann vereinbare ein Gespräch mit uns und wir besprechen das gemeinsam:
+      </p>
+    </div>
+  </section>
 
-<section class="cta-steps container text-center">
-  <h2 id="correctQuiz2" class="mb-4"></h2>
-  <h2 id="falseQuiz" class="mb-4"></h2>
-  <!-- Calendly Inline-Widget Beginn -->
-  <div
-    id="calendly-embed"
-    class="calendly-inline-widget"
-    style="min-width: 320px; height: 700px"
-  ></div>
-  <!-- Calendly Inline-Widget Ende -->
-  <p class="lead mt-6">Werde einer der besten Senior Developers weltweit!</p>
-</section>
+  <section class="cta-steps container text-center">
+    <!-- Calendly Inline-Widget Beginn -->
+    <div
+      id="calendly-embed"
+      class="calendly-inline-widget"
+    ></div>
+    <!-- Calendly Inline-Widget Ende -->
+    <p class="lead mt-6">Werde einer der besten Senior Developers weltweit!</p>
+  </section>
+</div>
 
 <!-- Testimonials -->
 <div class="border-top">
   <div class="container content-space-lg-3">
     <!-- Heading -->
-    <div class="mb-5 mb-md-9 testimonial-headline">
+    <div class="mb-5 mb-md-9">
       <h2 class="text-center pt-6">
         Was halten unsere Teilnehmer:innen von der DevCraft Academy?
       </h2>
