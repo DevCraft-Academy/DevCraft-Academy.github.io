@@ -3,24 +3,18 @@ layout: blog_layout
 title: Blog
 ---
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
-
- <!-- Heading -->
- <div class="w-md-75 text-center mx-md-auto mb-9">
-  <h2 class="h1">Latest Posts</h2>
-  <p>Whatever your status, our offers evolve according to your needs.</p>
+<!-- Hero -->
+<div class="container content-space-t-3 content-space-t-lg-4 content-space-b-2">
+  <div class="w-md-75 w-lg-50 text-center mx-auto">
+    <h1 class="display-2">Newsroom</h1>
+    <p class="lead">Aktuelle Beiträge und handverlesene Ressourcen</p>
+  </div>
 </div>
-<!-- End Heading -->
+<!-- End Hero -->
 
+<div class="container mb-10">
 <!-- Card Grid -->
-<div class="container">
+<div class="container mb-7">
   <div class="row justify-content-md-between align-items-md-center">
     <div class="col-md-5 mb-5 mb-md-0">
       <!-- Tags -->
@@ -40,7 +34,7 @@ title: Blog
         <!-- Input Card -->
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Search articles" aria-label="Search articles">
-          <button type="button" class="btn btn-primary"><i class="bi-search"></i></button>
+          <button type="button" class="btn btn-primary"><div>{% svg ../assets/svg/search.svg %}</div></button>
         </div>
         <!-- End Input Card -->
       </form>
@@ -52,9 +46,10 @@ title: Blog
 <!-- End Card Grid -->
 
 <!-- Card Grid -->
-<div class="container content-space-2 content-space-lg-3">
   <!-- Card -->
-  <div class="card card-stretched-vertical">
+  {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+  {% assign latest_post = sorted_posts | first %}
+  <div class="card card-stretched-vertical mb-10">
     <div class="row gx-0">
       <div class="col-lg-8">
         <div class="shape-container overflow-hidden">
@@ -83,10 +78,10 @@ title: Blog
         <!-- Card Body -->
         <div class="card-body">
           <h3 class="card-title">
-            <a class="text-dark" href="../blog-article.html">Familie</a>
+            <a class="text-dark" href="{{ latest_post.url }}">{{ latest_post.title }}</a>
           </h3>
 
-          <p class="card-text">Google is constantly updating its consumer AI, Google Assistant, with new features.</p>
+          <p class="card-text">{{ latest_post.content | truncatewords: 50 }}</p>
 
           <!-- Card Footer -->
           <div class="card-footer">
@@ -102,7 +97,7 @@ title: Blog
 
               <div class="flex-grow-1">
                 <div class="d-flex justify-content-end">
-                  <p class="card-text">July 15</p>
+                  <p class="card-text">{{ latest_post.date | date_to_string }}</p>
                 </div>
               </div>
             </div>
@@ -116,12 +111,13 @@ title: Blog
     <!-- End Row -->
   </div>
   <!-- End Card -->
-</div>
+
+<!-- </div> -->
 <!-- End Card Grid -->
 
 <!-- Card Grid -->
-<div class="container content-space-2 content-space-lg-3">
-  <div class="row">
+  <div class="row mb-7">
+    {% for post in sorted_posts limit: 6 offset: 1 %}
     <div class="col-sm-6 col-lg-4 mb-4">
       <!-- Card -->
       <div class="card h-100">
@@ -140,10 +136,10 @@ title: Blog
         <!-- Card Body -->
         <div class="card-body">
           <h3 class="card-title">
-            <a class="text-dark" href="../blog-article.html">Better is when everything works together</a>
+            <a class="text-dark" href="{{ post.url }}">{{ post.title }}</a>
           </h3>
 
-          <p class="card-text">Learn how your Google devices can do more.</p>
+          <p class="card-text">{{ post.content | truncatewords: 50 }}</p>
         </div>
         <!-- End Card Body -->
 
@@ -161,7 +157,7 @@ title: Blog
 
             <div class="flex-grow-1">
               <div class="d-flex justify-content-end">
-                <p class="card-text">July 15</p>
+                <p class="card-text">{{ post.date | date_to_string }}</p>
               </div>
             </div>
           </div>
@@ -171,121 +167,53 @@ title: Blog
       <!-- End Card -->
     </div>
     <!-- End Col -->
-
-    <div class="col-sm-6 col-lg-4 mb-4">
-      <!-- Card -->
-      <div class="card bg-dark h-100" style="background-image: url(../assets/svg/components/wave-pattern-light.svg);">
-        <!-- Card Body -->
-        <div class="card-body">
-          <div class="mb-5">
-            <span class="badge bg-primary">Featured</span>
-          </div>
-
-          <h3 class="card-title">
-            <a class="text-white" href="../blog-article.html">Announcing Front Tutorials: Master Adobe Ai - Part II</a>
-          </h3>
-
-          <p class="text-white-70">A new tutorial to make it easier to master Adobe Ai.</p>
-        </div>
-        <!-- End Card Body -->
-
-        <!-- Card Footer -->
-        <div class="card-footer">
-          <div class="d-flex align-items-center">
-            <div class="flex-shrink-0 avatar-group avatar-group-xs">
-              <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Aaron Larsson">
-                <img class="avatar-img" src="assets/images/testimonials/eva_lettner_avatar.png" alt="Image Description">
-              </a>
-            </div>
-
-            <div class="flex-grow-1">
-              <div class="d-flex justify-content-end">
-                <p class="card-text text-white-70">July 15</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Card Footer -->
-      </div>
-      <!-- End Card -->
-    </div>
-    <!-- End Col -->
-
-    <div class="col-sm-6 col-lg-4 mb-4">
-      <!-- Card -->
-      <div class="card h-100">
-        <div class="shape-container">
-          <img class="card-img-top" src="assets/images/mission.png" alt="Image Description">
-
-          <!-- Shape -->
-          <div class="shape shape-bottom zi-1" style="margin-bottom: -.25rem">
-            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
-              <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"></path>
-            </svg>
-          </div>
-          <!-- End Shape -->
-        </div>
-
-        <!-- Card Body -->
-        <div class="card-body">
-          <h3 class="card-title">
-            <a class="text-dark" href="../blog-article.html">Should You Buy An Apple Pencil?</a>
-          </h3>
-
-          <p class="card-text">The Apple Pencil is an expensive device that comes with some interesting features, but not everyone needs them.</p>
-        </div>
-        <!-- End Card Body -->
-
-        <!-- Card Footer -->
-        <div class="card-footer">
-          <div class="d-flex align-items-center">
-            <div class="flex-shrink-0 avatar-group avatar-group-xs">
-              <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Hanna Wolfe">
-                <img class="avatar-img" src="assets/images/testimonials/eva_lettner_avatar.png" alt="Image Description">
-              </a>
-              <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="John O'nolan">
-                <img class="avatar-img" src="assets/images/testimonials/iris_kraya_avatar.png" alt="Image Description">
-              </a>
-            </div>
-
-            <div class="flex-grow-1">
-              <div class="d-flex justify-content-end">
-                <p class="card-text">July 15</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Card Footer -->
-      </div>
-      <!-- End Card -->
-    </div>
-    <!-- End Col -->
+    {% endfor %}
   </div>
-  <!-- End Row -->
-</div>
 <!-- End Card Grid -->
 
-<!-- Pagination -->
-<nav aria-label="Page navigation example" >
-  <ul class="pagination justify-content-end mx-7">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">«</span>
-        <span class="visually-hidden">Previous</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item active">
-      <a class="page-link" href="#">2 <span class="visually-hidden">(current)</span></a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">»</span>
-        <span class="visually-hidden">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-<!-- End Pagination -->
 
+<!-- Pagination -->
+  <!-- <nav aria-label="Page navigation example" role="navigation">
+    <ul class="pagination justify-content-end">
+      {% if paginator.previous_page %}
+        <li class="page-item">
+          <a class="page-link" href="{{ paginator.previous_page_path }}" aria-label="Previous">
+            <span aria-hidden="true">«</span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link" aria-hidden="true">«</span>
+        </li>
+      {% endif %}
+
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <li class="page-item active" aria-current="page">
+            <span class="page-link">{{ page }} <span class="visually-hidden">(current)</span></span>
+          </li>
+        {% else %}
+          <li class="page-item">
+            <a class="page-link" href="{{ paginator.page_path(page) }}">{{ page }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <li class="page-item">
+          <a class="page-link" href="{{ paginator.next_page_path }}" aria-label="Next">
+            <span aria-hidden="true">»</span>
+            <span class="visually-hidden">Next</span>
+          </a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link" aria-hidden="true">»</span>
+        </li>
+      {% endif %}
+    </ul>
+  </nav> -->
+  <!-- End Pagination -->
+
+</div>
