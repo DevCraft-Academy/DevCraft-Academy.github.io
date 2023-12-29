@@ -13,39 +13,40 @@ title: Blog
 <!-- End Hero -->
 
 <div class="container mb-10">
-<!-- Card Grid -->
-<div class="container mb-7">
-  <div class="row justify-content-md-between align-items-md-center">
-    <div class="col-md-5 mb-5 mb-md-0">
-      <!-- Tags -->
-      <div class="d-md-flex align-items-md-center text-center text-md-start">
-        <span class="d-block me-md-3 mb-2 mb-md-1">Tags:</span>
-        <a class="btn btn-soft-primary btn-xs rounded-pill m-1" href="javascript:;">Business</a>
-        <a class="btn btn-soft-primary btn-xs rounded-pill m-1" href="javascript:;">Health</a>
-        <a class="btn btn-soft-primary btn-xs rounded-pill m-1" href="javascript:;">Environment</a>
-        <a class="btn btn-soft-primary btn-xs rounded-pill m-1" href="javascript:;">Adventure</a>
-      </div>
-      <!-- End Tags -->
-    </div>
-    <!-- End Col -->
-
-    <div class="col-md-5 col-lg-4">
-      <form>
-        <!-- Input Card -->
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search articles" aria-label="Search articles">
-          <button type="button" class="btn btn-primary"><div>{% svg ../assets/svg/search.svg %}</div></button>
+  <!-- Card Grid -->
+  <div class="container mb-7">
+    <div class="row justify-content-md-between align-items-md-center">
+      <div class="col-md-5 mb-5 mb-md-0">
+        <!-- Tags -->
+        <div class="d-md-flex align-items-md-center text-center text-md-start">
+          <span class="d-block me-md-3 mb-2 mb-md-1">Tags:</span>
+          <a class="btn btn-soft-primary btn-xs rounded-pill m-1" href="javascript:;">Business</a>
+          <a class="btn btn-soft-primary btn-xs rounded-pill m-1" href="javascript:;">Health</a>
+          <a class="btn btn-soft-primary btn-xs rounded-pill m-1" href="javascript:;">Environment</a>
+          <a class="btn btn-soft-primary btn-xs rounded-pill m-1" href="javascript:;">Adventure</a>
         </div>
-        <!-- End Input Card -->
-      </form>
-    </div>
-    <!-- End Col -->
-  </div>
-  <!-- End Row -->
-</div>
-<!-- End Card Grid -->
+        <!-- End Tags -->
+      </div>
+      <!-- End Col -->
 
-<!-- Card Grid -->
+      <!-- Search-Bar  -->
+      <!-- <div class="col-md-5 col-lg-4">
+        <form> -->
+          <!-- Input Card -->
+          <!-- <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search articles" aria-label="Search articles">
+            <button type="button" class="btn btn-primary"><div>{% svg ../assets/svg/search.svg %}</div></button>
+          </div> -->
+          <!-- End Input Card -->
+        <!-- </form>
+      </div> -->
+      <!-- End Col -->
+    </div>
+    <!-- End Row -->
+  </div>
+  <!-- End Card Grid -->
+
+  <!-- Card Grid -->
   <!-- Card -->
   {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
   {% assign latest_post = sorted_posts | first %}
@@ -53,7 +54,7 @@ title: Blog
     <div class="row gx-0">
       <div class="col-lg-8">
         <div class="shape-container overflow-hidden">
-          <img class="card-img" src="assets/images/vision.png" alt="Image Description">
+          <img class="card-img" src="{{latest_post.image-1}}" alt="Image Description">
 
           <!-- Shape -->
           <div class="shape shape-end d-none d-lg-block zi-1">
@@ -87,11 +88,8 @@ title: Blog
           <div class="card-footer">
             <div class="d-flex align-items-center">
               <div class="flex-shrink-0 avatar-group avatar-group-xs">
-                <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Aaron Larsson">
-                  <img class="avatar-img" src="assets/images/testimonials/dainius_stankevicius_avatar.png" alt="Image Description">
-                </a>
-                <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="John O'nolan">
-                  <img class="avatar-img" src="assets/images/testimonials/iris_kraya_avatar.png" alt="Image Description">
+                <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ latest_post.author}}">
+                  <img class="avatar-img" src="{{ latest_post.avatar-author}}" alt="Authorenportrait">
                 </a>
               </div>
 
@@ -112,17 +110,16 @@ title: Blog
   </div>
   <!-- End Card -->
 
-<!-- </div> -->
-<!-- End Card Grid -->
+  <!-- End Card Grid -->
 
-<!-- Card Grid -->
+  <!-- Card Grid -->
   <div class="row mb-7">
     {% for post in sorted_posts limit: 6 offset: 1 %}
     <div class="col-sm-6 col-lg-4 mb-4">
       <!-- Card -->
       <div class="card h-100">
         <div class="shape-container">
-          <img class="card-img-top" src="assets/images/history.png" alt="Image Description">
+          <img class="card-img-top" src="{{ post.image-1}}" alt="Artikel Themenbild">
 
           <!-- Shape -->
           <div class="shape shape-bottom zi-1" style="margin-bottom: -.25rem">
@@ -147,12 +144,10 @@ title: Blog
         <div class="card-footer">
           <div class="d-flex align-items-center">
             <div class="flex-shrink-0 avatar-group avatar-group-xs">
-              <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Nataly Gaga">
-                <img class="avatar-img" src="assets/images/testimonials/eva_lettner_avatar.png" alt="Image Description">
+              <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ post.author}}">
+                <img class="avatar-img" src="{{ post.avatar-author}}" alt="Authorenportrait">
               </a>
-              <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Emily Milda">
-                <img class="avatar-img" src="assets/images/testimonials/hong_hanh_avatar.jpg" alt="Image Description">
-              </a>
+
             </div>
 
             <div class="flex-grow-1">
@@ -169,10 +164,10 @@ title: Blog
     <!-- End Col -->
     {% endfor %}
   </div>
-<!-- End Card Grid -->
+  <!-- End Card Grid -->
 
 
-<!-- Pagination -->
+  <!-- Pagination -->
   <!-- <nav aria-label="Page navigation example" role="navigation">
     <ul class="pagination justify-content-end">
       {% if paginator.previous_page %}
