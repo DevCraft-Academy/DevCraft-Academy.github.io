@@ -4,6 +4,7 @@ author: Carola Helm
 avatar-author: ../../../assets/images/carola_portait_white.png
 image-1: ../../../assets/images/history.png
 image-2: ../../../assets/images/values.png 
+tags: family values
 ---
 
 
