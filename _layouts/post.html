@@ -55,25 +55,12 @@
         <!-- End Col -->
       </div>
       <!-- End Row -->
-    </div>
-
-    <div class="my-4 my-sm-8">
-      <img class="img-fluid rounded-lg" src="{{ page.image-1}}" alt="Image Description">
-    </div>
-
-    <div class="w-lg-65 mx-lg-auto text-center">
-      {{ content }}
-      {% include blog/posts_cta_shapes.html text-1="Finde heraus ob du zu uns passt!" text-2="In 6 Monaten vom Junior zum Senior Developer" btn-text="Zum Bewerbungs-Quiz" %}
-    </div>
-
-    <div class="my-4 my-sm-8">
-      <img class="img-fluid rounded-lg" src="{{ page.image-2}}" alt="Image Description">
-    </div>
+      </div>
     
-
-    <div class="w-lg-65 mx-lg-auto">
+      {{ content }}
+      
+      <div class="w-lg-65 mx-lg-auto">
       {% include blog/posts_cta_image.html text="Teste, ob du für die Academy geeignet bist!" btn-text="Mach das Quiz" %}
-
       <p>Folge uns auf <a class="link" href="https://www.linkedin.com/company/devcraft-academy/" target="_blank">Linkedin</a>, <a class="link" href="https://www.instagram.com/devcraft.academy/" target="_blank">Instagram</a> und <a class="link" href="https://www.youtube.com/@DevCraftAcademy" target="_blank">Youtube</a>.</p>
 
       {% include post_list_tags.html %}
