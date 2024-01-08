@@ -1,0 +1,52 @@
+---
+layout: post
+author: Carola Helm
+avatar-author: ../../../assets/images/carola_portait_white.png
+image-1: ../../../assets/images/blog/salary.png
+image-2: ../../../assets/images/blog/engineer.png
+tags: Geld Karriere
+---
+
+<div class="w-lg-65 mx-lg-auto">
+    <h3>Gehalt in der Softwareentwicklung: Ein Blick auf Junior und Senior Developers im DACH-Raum</h3>
+    <p>Gehalt in der Softwareentwicklung ist ein vielschichtiges Thema, das weit über die bloße finanzielle Vergütung hinausgeht. In diesem Beitrag vergleichen wir die Verdienstmöglichkeiten von Junior Developers mit denen von Senior Developers im DACH-Raum und werfen einen Blick auf die Faktoren, die das Gehalt beeinflussen.</p>
+</div>
+
+<div class="my-4 my-sm-8">
+    <img class="img-fluid rounded-lg" src="../../../assets/images/blog/salary.png" alt="Bild mit Notizzetteln und dem Schriftzug Imposter-Syndrom">
+</div>
+
+<div class="w-lg-65 mx-lg-auto">
+    <h3>Junior vs. Senior Developers: Ein Überblick</h3>
+    <p><strong>Junior Developers</strong> betreten die aufregende Welt der Softwareentwicklung mit frischen Fähigkeiten und meistern ihre ersten Codezeilen. Das Einstiegsgehalt liegt in der Regel zwischen 35.000 und 50.000 Euro pro Jahr, was zwar nicht luxuriös ist, aber finanzielle Sicherheit bietet.</p>
+    <p>Doch jetzt wird es spannend: <strong>Senior Developers</strong> sind die Rockstars der Entwicklerwelt. Mit ihrer Erfahrung und tiefen Expertise können sie ein Gehalt zwischen 60.000 und 200.000 Euro pro Jahr erwarten. Die Königinnen und Könige der Branche verdienen sich ihren Status redlich.</p>
+    <p>Aber warten – ist das nicht ein wenig unfair? Die Seniors scheinen das große Geld zu verdienen, während die Juniors mit einem kleineren Stück vom Kuchen auskommen müssen. Die Realität ist hart, aber die Erfahrung und das Fachwissen der Seniors sind der Schlüssel zu höheren Gehältern.</p>
+    <h3>Faktoren, die das Gehalt beeinflussen</h3>
+    <p>Die Unterschiede im Gehalt zwischen Juniors und Seniors können durch verschiedene Faktoren beeinflusst werden:</p>
+    <ol>
+        <li><strong>Unternehmensgröße:</strong> In großen Unternehmen wie Google oder Amazon ist das Gehalt oft höher als in kleineren Firmen oder Startups.</li>
+        <li><strong>Arbeitsort:</strong> Gehälter variieren je nach Region. In großen Städten verdient man oft mehr, auch wenn die Lebenshaltungskosten höher sind.</li>
+        <li><strong>Verhandlungsfähigkeiten:</strong> Dein persönliches Verhandlungsgeschick kann einen großen Einfluss auf dein Gehalt haben.</li>
+        <li><strong>Qualifikationen und Skills:</strong> Zertifizierungen und spezielle Fähigkeiten können den Weg zu höheren Gehältern ebnen.</li>
+    </ol>
+    {% include blog/posts_cta_shapes.html text-1="Finde heraus ob du zu uns passt!" text-2="In 6 Monaten vom Junior zum Senior Developer" btn-text="Zum Bewerbungs-Quiz" %}
+    <h3>Die individuelle Gestaltung des Gehalts</h3>
+    <p>Es ist kein Geheimnis, dass die individuelle Entscheidung über Arbeitgeber und Arbeitsort einen großen Einfluss auf das Gehalt hat. Verhandlungsfähigkeiten und einzigartige Fähigkeiten setzen zusätzliche Hebel in Bewegung.</p>
+    <p>Übrigens, Selbstständigkeit kann ebenfalls lukrativ sein. Bei guter Auftragslage sind 300.000 Euro oder mehr möglich, aber das ist eine Geschichte für ein anderes Video.</p>
+    <p>Du hast es selbst in der Hand. Es gibt kein standardisiertes Junior- oder Senior-Gehalt – deine Entscheidungen und deine Qualifikationen bestimmen dein Einkommen. Bei der DevCraft Academy unterstützen wir dich dabei, deine Fähigkeiten zu schärfen, damit du deinen Weg zu einem erfüllenden Job mit einem angemessenen Gehalt findest.</p>
+    <h3>Gehalt und Work-Life-Balance: Ein Bullshit-Mythos?</h3>
+    <p>Ein häufig gehörter Mythos besagt: "Gehalt ist nicht so wichtig, ich brauche kein Senior-Gehalt, mir ist wichtiger, Zeit zu haben." Doch diese Sichtweise hält einer genauen Betrachtung nicht stand. Höheres Gehalt ermöglicht oft nicht nur finanzielle Freiheit, sondern auch die Flexibilität, die Arbeitszeit zu reduzieren oder flexibler zu gestalten.</p>
+    <p>Teilzeit bei gleichem Verdienst? Das ist kein Wunschdenken, sondern eine mögliche Realität, besonders auf dem Weg zum Senior. Die DevCraft Academy ist darauf ausgerichtet, Wissenslücken zu schließen und die Entwicklung zum Senior Developer zu beschleunigen. Dieser Karriereschritt ermöglicht nicht nur einen höheren Stundenlohn, sondern bietet auch die Möglichkeit, bei Bedarf Teilzeit zu arbeiten und dennoch ein Senior-Gehalt zu verdienen.</p>
+</div>
+
+<div class="my-4 my-sm-8">
+    <img class="img-fluid rounded-lg" src="../../../assets/images/blog/engineer.png" alt="Versteckt hinter einer Maske im Berufsalltag">
+</div>
+
+<div class="w-lg-65 mx-lg-auto">
+    <h3>Fazit</h3>
+    <p>Das Thema Gehalt in der Softwareentwicklung ist komplex und von vielen Faktoren abhängig. Von der Branche über die Region bis hin zu individuellen Fähigkeiten und Erfahrungen – alles spielt eine Rolle. Es gibt keinen One-Size-Fits-All-Ansatz, und der Weg zum Senior Developer mit einem entsprechenden Gehalt ist individuell gestaltbar.</p>
+    <p>Die DevCraft Academy verfolgt nicht nur das Ziel, Entwicklern zu helfen, ihre Fähigkeiten zu verbessern, sondern auch, ihre individuellen Karriereziele zu erreichen. Ob es darum geht, in einer speziellen Branche Fuß zu fassen, erfolgreich Projekte zu leiten oder gefragte Skills zu erlernen – wir unterstützen dich auf deiner Reise.</p>
+    <p>Dein Gehalt ist mehr als nur eine Zahl auf deinem Kontoauszug. Es spiegelt deine Reise wider, deine Erfolge, Fähigkeiten und Entscheidungen. Bei der DevCraft Academy begleiten wir dich auf dieser Reise und bieten die Unterstützung, die du benötigst, um nicht nur beruflich zu wachsen, sondern auch finanziell erfolgreich zu sein.</p>
+    <!-- <p>Wenn dir dieser Beitrag gefallen hat, abonniere unseren Blog für weitere Insights und Tipps. Glaube an dich und deine Fähigkeiten!</p> -->
+</div>

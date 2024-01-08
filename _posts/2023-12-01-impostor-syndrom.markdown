@@ -4,7 +4,7 @@ author: Carola Helm
 avatar-author: ../../../assets/images/carola_portait_white.png
 image-1: ../../../assets/images/blog/impostor.png
 image-2: ../../../assets/images/blog/mask.png
-tags: persönlichkeit kompetenzgewinn
+tags: Persönlichkeit Karriere
 ---
 
 <div class="w-lg-65 mx-lg-auto">
@@ -45,5 +45,5 @@ tags: persönlichkeit kompetenzgewinn
     <h3>Fazit</h3>
     <p>Das Impostor-Syndrom ist eine Herausforderung, die viele Entwickler teilen. Die DevCraft Academy ist hier, um dich zu unterstützen und gezielt an deinen Wissenslücken zu arbeiten. Besuche unsere Website für eine Analyse und eine maßgeschneiderte Lernreise.</p>
     <p>Teile gerne deine Gedanken und Erfahrungen in den Kommentaren, um eine offene Diskussion zu fördern. Das Impostor-Syndrom zu überwinden ist ein fortlaufender Prozess, aber du bist nicht allein auf diesem Weg.</p>
-    <p>Wenn dir dieser Beitrag gefallen hat, abonniere unseren Blog für weitere Insights und Tipps. Glaube an dich und deine Fähigkeiten!</p>
+    <!-- <p>Wenn dir dieser Beitrag gefallen hat, abonniere unseren Blog für weitere Insights und Tipps. Glaube an dich und deine Fähigkeiten!</p> -->
 </div>
