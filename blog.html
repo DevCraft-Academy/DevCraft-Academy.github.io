@@ -1,0 +1,217 @@
+---
+layout: blog_layout
+title: Blog
+---
+
+<!-- Hero -->
+<div class="container content-space-t-3 content-space-t-lg-4 content-space-b-2">
+  <div class="w-md-75 w-lg-50 text-center mx-auto">
+    <h1 class="display-2">Newsroom</h1>
+    <p class="lead">Aktuelle Beiträge und handverlesene Ressourcen</p>
+  </div>
+</div>
+<!-- End Hero -->
+
+<div class="container mb-10">
+  <!-- Card Grid -->
+  <div class="container mb-7">
+    <div class="row justify-content-md-between align-items-md-center">
+      <div class="col-md-5 mb-5 mb-md-0">
+
+        <!-- Tags -->
+        <!-- <div class="d-md-flex align-items-md-center text-center text-md-start">
+          <span class="d-block me-md-3 mb-2 mb-md-1">Tags:</span>
+          {% assign all_tags = site.posts | map: 'tags' | join: ',' | split: ',' | uniq %}
+          {% for tag in all_tags %}
+            <a class="btn btn-soft-primary btn-xs rounded-pill m-1" href="/tags.html?tag={{ tag }}">{{ tag }}</a>
+          {% endfor %}
+        </div> -->
+        <!-- End Tags -->
+
+      </div>
+      <!-- End Col -->
+
+      <!-- Search-Bar  -->
+      <!-- <div class="col-md-5 col-lg-4">
+        <form> -->
+          <!-- Input Card -->
+          <!-- <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search articles" aria-label="Search articles">
+            <button type="button" class="btn btn-primary"><div>{% svg ../assets/svg/search.svg %}</div></button>
+          </div> -->
+          <!-- End Input Card -->
+        <!-- </form>
+      </div> -->
+      <!-- End Col -->
+    </div>
+    <!-- End Row -->
+  </div>
+  <!-- End Card Grid -->
+
+  <!-- Card Grid -->
+  <!-- Card -->
+  {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+  {% assign latest_post = sorted_posts | first %}
+  <div class="card card-stretched-vertical mb-10">
+    <div class="row gx-0">
+      <div class="col-lg-8">
+        <div class="shape-container overflow-hidden">
+          <img class="card-img" src="{{latest_post.image-1}}" alt="Image Description">
+
+          <!-- Shape -->
+          <div class="shape shape-end d-none d-lg-block zi-1">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100.1 1920" height="101%">
+              <path fill="#fff" d="M0,1920c0,0,93.4-934.4,0-1920h100.1v1920H0z"/>
+            </svg>
+          </div>
+          <!-- End Shape -->
+
+          <!-- Shape -->
+          <div class="shape shape-bottom d-lg-none zi-1" style="margin-bottom: -.25rem">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+              <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"></path>
+            </svg>
+          </div>
+          <!-- End Shape -->
+        </div>
+      </div>
+      <!-- End Col -->
+
+      <div class="col-lg-4">
+        <!-- Card Body -->
+        <div class="card-body">
+          <h3 class="card-title">
+            <a class="text-dark" href="{{ latest_post.url }}">{{ latest_post.title }}</a>
+          </h3>
+
+          <p class="card-text">{{ latest_post.content | truncatewords: 50 }}</p>
+
+          <!-- Card Footer -->
+          <div class="card-footer">
+            <div class="d-flex align-items-center">
+              <div class="flex-shrink-0 avatar-group avatar-group-xs">
+                <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ latest_post.author}}">
+                  <img class="avatar-img" src="{{ latest_post.avatar-author}}" alt="Authorenportrait">
+                </a>
+              </div>
+
+              <div class="flex-grow-1">
+                <div class="d-flex justify-content-end">
+                  <p class="card-text">{{ latest_post.date | date_to_string }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Card Footer -->
+        </div>
+        <!-- End Card Body -->
+      </div>
+      <!-- End Col -->
+    </div>
+    <!-- End Row -->
+  </div>
+  <!-- End Card -->
+
+  <!-- End Card Grid -->
+
+  <!-- Card Grid -->
+  <div class="row mb-7">
+    {% for post in sorted_posts limit: 6 offset: 1 %}
+    <div class="col-sm-6 col-lg-4 mb-4">
+      <!-- Card -->
+      <div class="card h-100">
+        <div class="shape-container">
+          <img class="card-img-top" src="{{ post.image-1}}" alt="Artikel Themenbild">
+
+          <!-- Shape -->
+          <div class="shape shape-bottom zi-1" style="margin-bottom: -.25rem">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+              <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"></path>
+            </svg>
+          </div>
+          <!-- End Shape -->
+        </div>
+
+        <!-- Card Body -->
+        <div class="card-body">
+          <h3 class="card-title">
+            <a class="text-dark" href="{{ post.url }}">{{ post.title }}</a>
+          </h3>
+
+          <p class="card-text">{{ post.content | truncatewords: 50 }}</p>
+        </div>
+        <!-- End Card Body -->
+
+        <!-- Card Footer -->
+        <div class="card-footer">
+          <div class="d-flex align-items-center">
+            <div class="flex-shrink-0 avatar-group avatar-group-xs">
+              <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ post.author}}">
+                <img class="avatar-img" src="{{ post.avatar-author}}" alt="Authorenportrait">
+              </a>
+
+            </div>
+
+            <div class="flex-grow-1">
+              <div class="d-flex justify-content-end">
+                <p class="card-text">{{ post.date | date_to_string }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Card Footer -->
+      </div>
+      <!-- End Card -->
+    </div>
+    <!-- End Col -->
+    {% endfor %}
+  </div>
+  <!-- End Card Grid -->
+
+  {% include post_list_tags.html %}
+
+  <!-- Pagination -->
+  <!-- <nav aria-label="Page navigation example" role="navigation">
+    <ul class="pagination justify-content-end">
+      {% if paginator.previous_page %}
+        <li class="page-item">
+          <a class="page-link" href="{{ paginator.previous_page_path }}" aria-label="Previous">
+            <span aria-hidden="true">«</span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link" aria-hidden="true">«</span>
+        </li>
+      {% endif %}
+
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <li class="page-item active" aria-current="page">
+            <span class="page-link">{{ page }} <span class="visually-hidden">(current)</span></span>
+          </li>
+        {% else %}
+          <li class="page-item">
+            <a class="page-link" href="{{ paginator.page_path(page) }}">{{ page }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+
+      {% if paginator.next_page %}
+        <li class="page-item">
+          <a class="page-link" href="{{ paginator.next_page_path }}" aria-label="Next">
+            <span aria-hidden="true">»</span>
+            <span class="visually-hidden">Next</span>
+          </a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link" aria-hidden="true">»</span>
+        </li>
+      {% endif %}
+    </ul>
+  </nav> -->
+  <!-- End Pagination -->
+
+</div>
